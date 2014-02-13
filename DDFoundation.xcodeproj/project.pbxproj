@@ -6,10 +6,84 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
+		BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523318ACE6E2001F0833 /* XCTest.framework */; };
+		BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
+		BB03523718ACE6E2001F0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523618ACE6E2001F0833 /* UIKit.framework */; };
+		BB03523A18ACE6E2001F0833 /* libDDFoundationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */; };
+		BB03525518ACE730001F0833 /* DDDebugOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BB03524D18ACE730001F0833 /* DDDebugOverlay.m */; };
+		BB03525618ACE730001F0833 /* DDLumberjackLoggerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BB03524F18ACE730001F0833 /* DDLumberjackLoggerModule.m */; };
+		BB03525718ACE730001F0833 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BB03525218ACE730001F0833 /* UIColor+HexColor.m */; };
+		BB03525A18ACEFA1001F0833 /* DDSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB03525918ACEFA1001F0833 /* DDSerializerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB03523818ACE6E2001F0833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3652BDED9E7207DBBD70D744 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB03522218ACE6E2001F0833;
+			remoteInfo = DDFoundationLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB03522118ACE6E2001F0833 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDFoundationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB03522518ACE6E2001F0833 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB03523218ACE6E2001F0833 /* DDFoundationLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDFoundationLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB03523318ACE6E2001F0833 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BB03523618ACE6E2001F0833 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BB03524A18ACE730001F0833 /* DDFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFoundation.h; sourceTree = "<group>"; };
+		BB03524C18ACE730001F0833 /* DDDebugOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDebugOverlay.h; sourceTree = "<group>"; };
+		BB03524D18ACE730001F0833 /* DDDebugOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDebugOverlay.m; sourceTree = "<group>"; };
+		BB03524E18ACE730001F0833 /* DDLumberjackLoggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLumberjackLoggerModule.h; sourceTree = "<group>"; };
+		BB03524F18ACE730001F0833 /* DDLumberjackLoggerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLumberjackLoggerModule.m; sourceTree = "<group>"; };
+		BB03525118ACE730001F0833 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		BB03525218ACE730001F0833 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		BB03525918ACEFA1001F0833 /* DDSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSerializerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB03522018ACE6E2001F0833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB03522F18ACE6E2001F0833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB03523A18ACE6E2001F0833 /* libDDFoundationLib.a in Frameworks */,
+				BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */,
+				BB03523718ACE6E2001F0833 /* UIKit.framework in Frameworks */,
+				BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		3652B7C9E78FC1DC8BCCE05A /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */,
+				BB03523218ACE6E2001F0833 /* DDFoundationLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -17,16 +91,123 @@
 		3652BEEAC4909082466D3FC3 = {
 			isa = PBXGroup;
 			children = (
+				BB03525818ACEF3E001F0833 /* tests */,
+				BB03524918ACE730001F0833 /* src */,
+				BB03522418ACE6E2001F0833 /* Frameworks */,
 				3652B7C9E78FC1DC8BCCE05A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		BB03522418ACE6E2001F0833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB03522518ACE6E2001F0833 /* Foundation.framework */,
+				BB03523318ACE6E2001F0833 /* XCTest.framework */,
+				BB03523618ACE6E2001F0833 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB03524918ACE730001F0833 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BB03524A18ACE730001F0833 /* DDFoundation.h */,
+				BB03524B18ACE730001F0833 /* debug */,
+				BB03525018ACE730001F0833 /* extension */,
+				BB03525318ACE730001F0833 /* metrics */,
+				BB03525418ACE730001F0833 /* serialization */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BB03524B18ACE730001F0833 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				BB03524C18ACE730001F0833 /* DDDebugOverlay.h */,
+				BB03524D18ACE730001F0833 /* DDDebugOverlay.m */,
+				BB03524E18ACE730001F0833 /* DDLumberjackLoggerModule.h */,
+				BB03524F18ACE730001F0833 /* DDLumberjackLoggerModule.m */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		BB03525018ACE730001F0833 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				BB03525118ACE730001F0833 /* UIColor+HexColor.h */,
+				BB03525218ACE730001F0833 /* UIColor+HexColor.m */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		BB03525318ACE730001F0833 /* metrics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = metrics;
+			sourceTree = "<group>";
+		};
+		BB03525418ACE730001F0833 /* serialization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = serialization;
+			sourceTree = "<group>";
+		};
+		BB03525818ACEF3E001F0833 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				BB03525918ACEFA1001F0833 /* DDSerializerTests.m */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB03522218ACE6E2001F0833 /* DDFoundationLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB03524718ACE6E2001F0833 /* Build configuration list for PBXNativeTarget "DDFoundationLib" */;
+			buildPhases = (
+				BB03521F18ACE6E2001F0833 /* Sources */,
+				BB03522018ACE6E2001F0833 /* Frameworks */,
+				BB03522118ACE6E2001F0833 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDFoundationLib;
+			productName = DDFoundationLib;
+			productReference = BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BB03523118ACE6E2001F0833 /* DDFoundationLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB03524818ACE6E2001F0833 /* Build configuration list for PBXNativeTarget "DDFoundationLibTests" */;
+			buildPhases = (
+				BB03522E18ACE6E2001F0833 /* Sources */,
+				BB03522F18ACE6E2001F0833 /* Frameworks */,
+				BB03523018ACE6E2001F0833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB03523918ACE6E2001F0833 /* PBXTargetDependency */,
+			);
+			name = DDFoundationLibTests;
+			productName = DDFoundationLibTests;
+			productReference = BB03523218ACE6E2001F0833 /* DDFoundationLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3652BDED9E7207DBBD70D744 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 3652B34CA6A9F24FF2F78D1F /* Build configuration list for PBXProject "du-da-foundation" */;
+			attributes = {
+			};
+			buildConfigurationList = 3652B34CA6A9F24FF2F78D1F /* Build configuration list for PBXProject "DDFoundation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -38,9 +219,50 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BB03522218ACE6E2001F0833 /* DDFoundationLib */,
+				BB03523118ACE6E2001F0833 /* DDFoundationLibTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB03523018ACE6E2001F0833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB03521F18ACE6E2001F0833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB03525518ACE730001F0833 /* DDDebugOverlay.m in Sources */,
+				BB03525618ACE730001F0833 /* DDLumberjackLoggerModule.m in Sources */,
+				BB03525718ACE730001F0833 /* UIColor+HexColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB03522E18ACE6E2001F0833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB03525A18ACEFA1001F0833 /* DDSerializerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB03523918ACE6E2001F0833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB03522218ACE6E2001F0833 /* DDFoundationLib */;
+			targetProxy = BB03523818ACE6E2001F0833 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3652B059D3A80D087B52AA6D /* Debug */ = {
@@ -55,10 +277,182 @@
 			};
 			name = Release;
 		};
+		BB03524318ACE6E2001F0833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/DDFoundationLib.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDFoundationLib/DDFoundationLib-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB03524418ACE6E2001F0833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/DDFoundationLib.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDFoundationLib/DDFoundationLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BB03524518ACE6E2001F0833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDFoundationLib/DDFoundationLib-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DDFoundationLibTests/DDFoundationLibTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		BB03524618ACE6E2001F0833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDFoundationLib/DDFoundationLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DDFoundationLibTests/DDFoundationLibTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3652B34CA6A9F24FF2F78D1F /* Build configuration list for PBXProject "du-da-foundation" */ = {
+		3652B34CA6A9F24FF2F78D1F /* Build configuration list for PBXProject "DDFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3652BAD2B9FDD9155E71FFCE /* Release */,
@@ -66,6 +460,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BB03524718ACE6E2001F0833 /* Build configuration list for PBXNativeTarget "DDFoundationLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB03524318ACE6E2001F0833 /* Release */,
+				BB03524418ACE6E2001F0833 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB03524818ACE6E2001F0833 /* Build configuration list for PBXNativeTarget "DDFoundationLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB03524518ACE6E2001F0833 /* Release */,
+				BB03524618ACE6E2001F0833 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
