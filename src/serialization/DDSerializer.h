@@ -1,4 +1,4 @@
-// DDFoundation.h
+// DDSerializer.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,29 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+
+@class DDSerializationMapping;
+
+/**
+ * A simple but still powerful serializer/deserializer which, for example, can be used to
+ * map data returned from a server to objects.
+ */
+@interface DDSerializer : NSObject
+
+extern NSString* const DDSerializerErrorDomain;
+
+typedef enum
+{
+    DDSerializerErrorCodeInvalidDictionary = 1,
+    DDSerializerErrorCodeInvalidObject,
+    DDSerializerErrorCodeSerializationError,
+    DDSerializerErrorCodeDeserializationError
+} DDSerializerErrorCode;
+
++ (id)objectFromDictionary:(NSDictionary*)dictionary
+               withMapping:(DDSerializationMapping*)serializationMapping
+                     error:(NSError**)error;
+
+@end

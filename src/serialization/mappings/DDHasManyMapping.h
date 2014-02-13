@@ -1,4 +1,4 @@
-// DDFoundation.h
+// DDHasManyMapping.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,36 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+#import "DDMapping.h"
+
+@class DDSerializationMapping;
+
+
+@interface DDHasManyMapping : NSObject <DDMapping>
+
+extern NSString* const DDHasManyMappingErrorDomain;
+
+typedef enum
+{
+    DDHasManyMappingErrorCodeCouldNotDeserialize = 1,
+    DDDHasManyMappingErrorCodeCouldNotSerialize,
+    DDHasManyMappingErrorCodeValueIsRequired,
+    DDHasManyMappingErrorCodeNotAnArray
+} DDHasOneMappingErrorCode;
+
+
+@property (nonatomic, readonly) NSString* key;
+@property (nonatomic, readonly) NSString* field;
+
+@property (nonatomic, readonly) BOOL required;
+
+@property (nonatomic, readonly) DDSerializationMapping* serializationMapping;
+
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+       serializationMapping:(DDSerializationMapping*)serializationMapping
+                   required:(BOOL)required;
+
+@end

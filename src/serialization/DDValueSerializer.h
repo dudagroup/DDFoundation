@@ -1,4 +1,4 @@
-// DDFoundation.h
+// DDValueSerializer.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+
+@protocol DDValueSerializer <NSObject>
+
+- (id)serializeValue:(id)value error:(NSError**)error;
+- (id)deserializeValue:(id)value error:(NSError**)error;
+
+@end

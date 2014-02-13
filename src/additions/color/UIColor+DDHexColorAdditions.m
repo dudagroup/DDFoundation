@@ -1,4 +1,4 @@
-// DDFoundation.h
+// UIColor+DDHexColorAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,33 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import "UIColor+DDHexColorAdditions.h"
+
+
+@implementation UIColor (DDHexColorAdditions)
+
++ (UIColor*)colorFromRgba:(NSUInteger)colorValue
+{
+
+
+    return nil;
+}
+
++ (UIColor*)colorFromRgbaString:(NSString*)rgbaString
+{
+    return nil;
+}
+
++ (UIColor*)colorFromArgb:(NSUInteger)colorValue
+{
+    return nil;
+}
+
++ (UIColor*)colorFromArgbString:(NSString*)argbString
+{
+    return nil;
+}
+
+
+@end

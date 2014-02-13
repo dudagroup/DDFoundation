@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "DDFoundation"
     s.version      = "1.0"
-    s.license      = "DU DA"
+    s.license      = "MIT"
 
     s.summary      = "Foundation"
     s.homepage     = "https://dudagroup.com"

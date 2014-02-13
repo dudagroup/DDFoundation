@@ -1,4 +1,4 @@
-// DDFoundation.h
+// UIColor+DDHexColorAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,30 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@interface UIColor (DDHexColorAdditions)
+
+///=================================================================================================
+/// @name RGBA
+///=================================================================================================
+
+/**
+ * Returns a UIColor with a provided RGBA integer color.
+ *
+ * @param colorValue RGBA integer e.g. 0xFF0000CC for a semi transparent red.
+ * @return UIColor with the provided RGBA color.
+ */
++ (UIColor*)colorFromRgba:(NSUInteger)colorValue;
++ (UIColor*)colorFromRgbaString:(NSString*)rgbaString;
+
+///=================================================================================================
+/// @name ARGB
+///=================================================================================================
+
++ (UIColor*)colorFromArgb:(NSUInteger)colorValue;
++ (UIColor*)colorFromArgbString:(NSString*)argbString;
+
+@end

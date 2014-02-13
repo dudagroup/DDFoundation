@@ -1,4 +1,4 @@
-// DDFoundation.h
+// DDMapping.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+
+@protocol DDMapping <NSObject>
+
+- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error;
+- (void)mapFromObject:(id)object toDictionary:(NSDictionary*)dictionary error:(NSError**)error;
+
+@end

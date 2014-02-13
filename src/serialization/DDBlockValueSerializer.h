@@ -1,4 +1,4 @@
-// DDFoundation.h
+// DDBlockValueSerializer.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -19,3 +19,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+#import <Foundation/Foundation.h>
+#import "DDValueSerializer.h"
+
+
+@interface DDBlockValueSerializer : NSObject <DDValueSerializer>
+
+typedef id (^DDSerializeBlock)(id value, NSError** error);
+typedef id (^DDDeserializeBlock)(id value, NSError** error);
+
+- (instancetype)initWithSerializeBlock:(DDSerializeBlock)serializeBlock
+                      deserializeBlock:(DDDeserializeBlock)deserializeBlock;
+
+@end
