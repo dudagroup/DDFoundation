@@ -34,6 +34,7 @@
 @property (nonatomic) CGFloat testFloat;
 
 @property (nonatomic) TestObject* testObject;
+@property (nonatomic) NSArray* testObjects;
 
 @end
 
@@ -363,6 +364,54 @@
 
     XCTAssertNotNil(testObject.testObject);
     XCTAssertEqualObjects(testObject.testObject.testString, @"A Test String!");
+}
+
+- (void)testHasManyMapping
+{
+    DDSerializationMapping* testObjectMapping =
+        [DDSerializationMapping mappingWithClass:[TestObject class]
+                           withConstructionBlock:^(DDSerializationMapping* mapping)
+        {
+            [mapping mapKey:@"test_string" toField:@"testString" class:[NSString class] required:YES strict:YES];
+        }];
+
+    DDSerializationMapping* serializationMapping =
+        [DDSerializationMapping mappingWithClass:[TestObject class]
+                           withConstructionBlock:^(DDSerializationMapping* mapping)
+        {
+            [mapping hasManyMapping:testObjectMapping
+                             forKey:@"test_objects"
+                              field:@"testObjects"
+                           required:YES];
+        }];
+
+    NSDictionary* testDictionary = @
+    {
+        @"test_objects": @
+        [
+            @{
+                @"test_string": @"A Test String!"
+            },
+
+            @{
+                @"test_string": @"A Test String!"
+            }
+        ]
+    };
+
+    NSError* error = nil;
+    TestObject* testObject = [DDSerializer objectFromDictionary:testDictionary
+                                                    withMapping:serializationMapping
+                                                          error:&error];
+
+    NSError* underlyingError = error.userInfo[NSUnderlyingErrorKey];
+
+    XCTAssertNotNil(testObject.testObjects);
+
+    for (TestObject* childTestObject in testObject.testObjects)
+    {
+        XCTAssertEqualObjects(childTestObject.testString, @"A Test String!");
+    }
 }
 
 @end

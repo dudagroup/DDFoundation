@@ -30,6 +30,8 @@
 
 }
 
+NSString* const DDHasManyMappingErrorDomain = @"com.dudagroup.serialization.hasmany";
+
 - (instancetype)initWithKey:(NSString*)key
                       field:(NSString*)field
        serializationMapping:(DDSerializationMapping*)serializationMapping

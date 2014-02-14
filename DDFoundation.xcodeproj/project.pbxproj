@@ -136,6 +136,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3652B8AEE312C0ADE75DDE44 /* mappings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mappings;
+			sourceTree = "<group>";
+		};
 		3652B901479622AD721E2271 /* color */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3652B24C0417E52BC94A4C55 /* DDSerializerDeserializationTests.m */,
+				3652B8AEE312C0ADE75DDE44 /* mappings */,
 			);
 			path = serialization;
 			sourceTree = "<group>";

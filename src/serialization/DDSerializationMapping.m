@@ -25,6 +25,7 @@
 #import "DDMapping.h"
 #import "DDKeyFieldMapping.h"
 #import "DDHasOneMapping.h"
+#import "DDHasManyMapping.h"
 
 
 @implementation DDSerializationMapping
@@ -100,7 +101,13 @@
                  field:(NSString*)field
               required:(BOOL)required
 {
+    DDHasManyMapping* hasManyMapping =
+        [[DDHasManyMapping alloc] initWithKey:key
+                                        field:field
+                         serializationMapping:mapping
+                                     required:required];
 
+    [self addMapping:hasManyMapping];
 }
 
 - (void)addMapping:(id<DDMapping>)mapping

@@ -36,7 +36,7 @@ typedef enum
     DDDHasManyMappingErrorCodeCouldNotSerialize,
     DDHasManyMappingErrorCodeValueIsRequired,
     DDHasManyMappingErrorCodeNotAnArray
-} DDHasOneMappingErrorCode;
+} DDHasManyMappingErrorCode;
 
 
 @property (nonatomic, readonly) NSString* key;

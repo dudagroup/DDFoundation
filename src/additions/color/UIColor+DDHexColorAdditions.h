@@ -30,12 +30,28 @@
 ///=================================================================================================
 
 /**
- * Returns a UIColor with a provided RGBA integer color.
- *
- * @param colorValue RGBA integer e.g. 0xFF0000CC for a semi transparent red.
- * @return UIColor with the provided RGBA color.
+ Returns a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
+
+     [UIColor colorFromRgba:0xFF0000CC]; // Creates a semi transparent red.
+
+ @param colorValue RGBA integer e.g. 0xFF0000CC for a semi transparent red.
+ @return UIColor with the provided RGBA color.
  */
 + (UIColor*)colorFromRgba:(NSUInteger)colorValue;
+
+/**
+ Return a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
+
+     [UIColor colorFromRgbaString:@"#FF0000CC"]; // Creates a semi transparent red.
+     // Or
+     [UIColor colorFromRgbaString:@"FF0000CC"];
+     // Or
+     [UIColor colorFromRgbaString:@"0xFF0000CC"];
+
+ @param rgbaString A string representing a color in hexadecimal, prefixes like '0x' or '#' will be
+                   stripped away.
+ @return UIColor with the provided RGBA color.
+ */
 + (UIColor*)colorFromRgbaString:(NSString*)rgbaString;
 
 ///=================================================================================================
