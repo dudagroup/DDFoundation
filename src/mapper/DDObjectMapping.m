@@ -20,15 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DDSerializationMapping.h"
-#import "DDValueSerializer.h"
-#import "DDMapping.h"
+#import "DDObjectMapping.h"
+#import "DDObjectMapping.h"
 #import "DDKeyFieldMapping.h"
 #import "DDHasOneMapping.h"
 #import "DDHasManyMapping.h"
 
 
-@implementation DDSerializationMapping
+@implementation DDObjectMapping
 {
     NSMutableArray* _mappings;
 }
@@ -41,7 +40,7 @@
     NSParameterAssert(class);
     NSParameterAssert(constructionBlock);
 
-    DDSerializationMapping* mapping = [[DDSerializationMapping alloc] initWithClass:class];
+    DDObjectMapping* mapping = [[DDObjectMapping alloc] initWithClass:class];
     constructionBlock(mapping);
 
     return mapping;
@@ -80,23 +79,28 @@
     [self addMapping:keyFieldMapping];
 }
 
-- (void)mapKey:(NSString*)key toField:(NSString*)field class:(Class)class withSerializer:(id <DDValueSerializer>)serializer
+- (void)mapKey:(NSString*)key
+                toField:(NSString*)field
+                  class:(Class)class
+       withMappingBlock:(DDMappingBlock)mappingBlock
+    reverseMappingBlock:(DDMappingBlock)reverseMappingBlock
 {
 
 }
 
-- (void)hasOneMapping:(DDSerializationMapping*)mapping forKey:(NSString*)key field:(NSString*)field required:(BOOL)required
+
+- (void)hasOneMapping:(DDObjectMapping*)mapping forKey:(NSString*)key field:(NSString*)field required:(BOOL)required
 {
     DDHasOneMapping* hasOneMapping =
         [[DDHasOneMapping alloc] initWithKey:key
                                        field:field
-                        serializationMapping:mapping
+                                     mapping:mapping
                                     required:required];
 
     [self addMapping:hasOneMapping];
 }
 
-- (void)hasManyMapping:(DDSerializationMapping*)mapping
+- (void)hasManyMapping:(DDObjectMapping*)mapping
                 forKey:(NSString*)key
                  field:(NSString*)field
               required:(BOOL)required
@@ -104,7 +108,7 @@
     DDHasManyMapping* hasManyMapping =
         [[DDHasManyMapping alloc] initWithKey:key
                                         field:field
-                         serializationMapping:mapping
+                                      mapping:mapping
                                      required:required];
 
     [self addMapping:hasManyMapping];

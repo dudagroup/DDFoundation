@@ -21,13 +21,12 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "DDBlockValueMapper.h"
 
-@protocol DDValueSerializer;
 
+@interface DDObjectMapping : NSObject
 
-@interface DDSerializationMapping : NSObject
-
-typedef void (^DDSerializationMappingConstructionBlock)(DDSerializationMapping* mapping);
+typedef void (^DDSerializationMappingConstructionBlock)(DDObjectMapping* mapping);
 typedef void (^DDSerializationMappingFormatBlock)(NSString* mapping);
 
 ///=================================================================================================
@@ -46,10 +45,28 @@ typedef void (^DDSerializationMappingFormatBlock)(NSString* mapping);
 /// @name Map Properties
 ///=================================================================================================
 
-- (void)mapKey:(NSString*)key toField:(NSString*)field class:(Class)class required:(BOOL)required strict:(BOOL)strict;
-- (void)mapKey:(NSString*)key toField:(NSString*)field class:(Class)class withSerializer:(id<DDValueSerializer>)serializer;
+- (void)mapKey:(NSString*)key
+       toField:(NSString*)field
+         class:(Class)class
+      required:(BOOL)required
+        strict:(BOOL)strict;
 
-- (void)hasOneMapping:(DDSerializationMapping*)mapping forKey:(NSString*)key field:(NSString*)field required:(BOOL)required;
-- (void)hasManyMapping:(DDSerializationMapping*)mapping forKey:(NSString*)key field:(NSString*)field required:(BOOL)required;
+- (void)mapKey:(NSString*)key
+                toField:(NSString*)field
+                  class:(Class)class
+       withMappingBlock:(DDMappingBlock)mappingBlock
+    reverseMappingBlock:(DDMappingBlock)reverseMappingBlock;
+
+- (void)hasOneMapping:(DDObjectMapping*)mapping
+               forKey:(NSString*)key
+                field:(NSString*)field
+             required:(BOOL)required;
+
+- (void)hasManyMapping:(DDObjectMapping*)mapping
+                forKey:(NSString*)key
+                 field:(NSString*)field
+              required:(BOOL)required;
+
+- (void)addMapping:(id<DDMapping>)mapping;
 
 @end

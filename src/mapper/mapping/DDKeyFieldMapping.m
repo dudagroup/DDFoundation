@@ -28,7 +28,7 @@
 
 }
 
-NSString* const DDKeyFieldMappingErrorDomain = @"com.dudagroup.serialization.keyvalue";
+NSString* const DDKeyFieldMappingErrorDomain = @"com.dudagroup.mapper.keyfield";
 
 - (instancetype)init
 {
@@ -73,19 +73,27 @@ NSString* const DDKeyFieldMappingErrorDomain = @"com.dudagroup.serialization.key
         value = nil;
     }
 
-    if (!value && _required)
+    if (!value)
     {
-        NSString* description =
+        if (_required)
+        {
+            NSString* description =
             [NSString stringWithFormat:@"Value for key '%@' is nil but was set as required!", _key];
 
-        NSDictionary* userInfo = @
-        {
-            NSLocalizedDescriptionKey: description
-        };
+            NSDictionary* userInfo = @
+            {
+                NSLocalizedDescriptionKey: description
+            };
 
-        *error = [NSError errorWithDomain:DDKeyFieldMappingErrorDomain
-                                     code:DDKeyFieldMappingErrorCodeValueIsRequired
-                                 userInfo:userInfo];
+            *error = [NSError errorWithDomain:DDKeyFieldMappingErrorDomain
+                                         code:DDKeyFieldMappingErrorCodeValueIsRequired
+                                     userInfo:userInfo];
+        }
+        else
+        {
+            [object setValue:nil forKey:_field];
+        }
+
         return;
     }
 
@@ -150,9 +158,35 @@ NSString* const DDKeyFieldMappingErrorDomain = @"com.dudagroup.serialization.key
     [object setValue:value forKey:_field];
 }
 
-- (void)mapFromObject:(id)object toDictionary:(NSDictionary*)dictionary error:(NSError**)error
+- (void)mapFromObject:(id)object toDictionary:(NSMutableDictionary*)dictionary error:(NSError**)error
 {
+    id value = [object valueForKey:_field];
 
+    if (!value)
+    {
+        if (_required)
+        {
+            NSString* description =
+            [NSString stringWithFormat:@"Value for field '%@' is nil but was set as required!", _field];
+
+            NSDictionary* userInfo = @
+            {
+                NSLocalizedDescriptionKey: description
+            };
+
+            *error = [NSError errorWithDomain:DDKeyFieldMappingErrorDomain
+                                         code:DDKeyFieldMappingErrorCodeValueIsRequired
+                                     userInfo:userInfo];
+        }
+        else
+        {
+            [dictionary setObject:[NSNull null] forKey:_key];
+        }
+    }
+    else
+    {
+        [dictionary setObject:value forKey:_key];
+    }
 }
 
 @end

@@ -1,4 +1,4 @@
-// DDHasOneMapping.h
+// DDMapping.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,33 +21,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDMapping.h"
 
-@class DDSerializationMapping;
+@protocol DDMapping <NSObject>
 
-
-@interface DDHasOneMapping : NSObject <DDMapping>
-
-extern NSString* const DDHasOneMappingErrorDomain;
-
-typedef enum
-{
-    DDHasOneMappingErrorCodeCouldNotDeserialize = 1,
-    DDHasOneMappingErrorCodeCouldNotSerialize,
-    DDHasOneMappingErrorCodeValueIsRequired
-} DDHasOneMappingErrorCode;
-
-
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
-
-@property (nonatomic, readonly) BOOL required;
-
-@property (nonatomic, readonly) DDSerializationMapping* serializationMapping;
-
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-       serializationMapping:(DDSerializationMapping*)serializationMapping
-                   required:(BOOL)required;
+- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error;
+- (void)mapFromObject:(id)object toDictionary:(NSMutableDictionary*)dictionary error:(NSError**)error;
 
 @end

@@ -1,4 +1,4 @@
-// DDMapping.h
+// DDBlockValueSerializer.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,11 +20,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "DDBlockValueMapper.h"
 
-@protocol DDMapping <NSObject>
 
-- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error;
-- (void)mapFromObject:(id)object toDictionary:(NSDictionary*)dictionary error:(NSError**)error;
+@implementation DDBlockValueMapper
+{
+
+}
+
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+               mappingBlock:(DDMappingBlock)mapBlock
+        reverseMappingBlock:(DDMappingBlock)reverseMapBlock
+{
+    return nil;
+}
+
+- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error
+{
+
+}
+
+- (void)mapFromObject:(id)object
+         toDictionary:(NSMutableDictionary*)dictionary
+                error:(NSError**)error
+{
+
+}
+
 
 @end

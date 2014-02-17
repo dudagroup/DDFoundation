@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3652B1CA576817EDC8940E76 /* DDSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BE2CA670177893DCBDD1 /* DDSerializer.m */; };
+		3652B1CA576817EDC8940E76 /* DDMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BE2CA670177893DCBDD1 /* DDMapper.m */; };
 		3652B27BD231275B520E12D4 /* DDHasManyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF62E9B2EE17337477C2 /* DDHasManyMapping.m */; };
+		3652B3CDD1EE4B5B9AF577DE /* MockObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BBA0E0D7D486ACD630D8 /* MockObjects.m */; };
 		3652B41920BE285FDAE23DA6 /* UIColor+DDHexColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA70C853C2716681A779 /* UIColor+DDHexColorAdditions.m */; };
 		3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */; };
+		3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */; };
 		3652B8BFA040DFB4BD43D6DF /* DDHasOneMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA1FAFBA87B3F5840D1F /* DDHasOneMapping.m */; };
-		3652BB2C8E03A5ACC5ED1B16 /* DDSerializationMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B1CBA876A6126454BFD3 /* DDSerializationMapping.m */; };
-		3652BBAD6703B88DD3A32F98 /* DDSerializerDeserializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B24C0417E52BC94A4C55 /* DDSerializerDeserializationTests.m */; };
-		3652BF1DACA0F6BC350002A8 /* DDBlockValueSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B6B766B0635A1E76224B /* DDBlockValueSerializer.m */; };
+		3652B9270F86D4AD4F4365E7 /* DDKeyFieldMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */; };
+		3652BB2C8E03A5ACC5ED1B16 /* DDObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */; };
+		3652BCEA799883D22B289A29 /* DDBlockValueMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF7A302498C9F1D5B15B /* DDBlockValueMapper.m */; };
+		3652BD1FE8A8375164A540BE /* DDHasOneMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */; };
 		BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
 		BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523318ACE6E2001F0833 /* XCTest.framework */; };
 		BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
 		BB03523718ACE6E2001F0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523618ACE6E2001F0833 /* UIKit.framework */; };
 		BB03523A18ACE6E2001F0833 /* libDDFoundationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */; };
 		BB03527718ACF160001F0833 /* DDFoundationLibTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB03527518ACF160001F0833 /* DDFoundationLibTests-Info.plist */; };
+		BB933B5018B2812100B1558A /* DDMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B6BFC4E6E56B567B1DFD /* DDMapperTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,23 +50,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3652B1CBA876A6126454BFD3 /* DDSerializationMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSerializationMapping.m; sourceTree = "<group>"; };
+		3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasOneMappingTests.m; sourceTree = "<group>"; };
+		3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDObjectMapping.m; sourceTree = "<group>"; };
 		3652B1DF21E4EB85F6BF427B /* DDHasOneMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHasOneMapping.h; sourceTree = "<group>"; };
 		3652B24B85DB65568A2E2A35 /* DDMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMapping.h; sourceTree = "<group>"; };
-		3652B24C0417E52BC94A4C55 /* DDSerializerDeserializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSerializerDeserializationTests.m; sourceTree = "<group>"; };
-		3652B2CD779331F8A9106EB0 /* DDSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSerializer.h; sourceTree = "<group>"; };
+		3652B2CD779331F8A9106EB0 /* DDMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMapper.h; sourceTree = "<group>"; };
+		3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDKeyFieldMappingTests.m; sourceTree = "<group>"; };
+		3652B3F9E405BB70B5C4BD9F /* DDBlockValueMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBlockValueMapper.h; sourceTree = "<group>"; };
+		3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasManyMappingTests.m; sourceTree = "<group>"; };
 		3652B5F5CBCC19EACE1385C1 /* DDKeyFieldMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDKeyFieldMapping.h; sourceTree = "<group>"; };
 		3652B64BE33DA12846A55313 /* DDHasManyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHasManyMapping.h; sourceTree = "<group>"; };
 		3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDKeyFieldMapping.m; sourceTree = "<group>"; };
-		3652B6B766B0635A1E76224B /* DDBlockValueSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBlockValueSerializer.m; sourceTree = "<group>"; };
-		3652B7269BFC2FAC559F6B69 /* DDBlockValueSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBlockValueSerializer.h; sourceTree = "<group>"; };
+		3652B6BFC4E6E56B567B1DFD /* DDMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMapperTests.m; sourceTree = "<group>"; };
 		3652B883E56A2233DA76A81B /* UIColor+DDHexColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDHexColorAdditions.h"; sourceTree = "<group>"; };
-		3652B92ACA9E749847B878C9 /* DDSerializationMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSerializationMapping.h; sourceTree = "<group>"; };
+		3652B92ACA9E749847B878C9 /* DDObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDObjectMapping.h; sourceTree = "<group>"; };
 		3652BA1FAFBA87B3F5840D1F /* DDHasOneMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasOneMapping.m; sourceTree = "<group>"; };
 		3652BA70C853C2716681A779 /* UIColor+DDHexColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDHexColorAdditions.m"; sourceTree = "<group>"; };
-		3652BAAFC087BC6B2686ED9C /* DDValueSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDValueSerializer.h; sourceTree = "<group>"; };
-		3652BE2CA670177893DCBDD1 /* DDSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSerializer.m; sourceTree = "<group>"; };
+		3652BA9D8CEA86C9F3B461FA /* MockObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockObjects.h; sourceTree = "<group>"; };
+		3652BBA0E0D7D486ACD630D8 /* MockObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockObjects.m; sourceTree = "<group>"; };
+		3652BE2CA670177893DCBDD1 /* DDMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMapper.m; sourceTree = "<group>"; };
 		3652BF62E9B2EE17337477C2 /* DDHasManyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasManyMapping.m; sourceTree = "<group>"; };
+		3652BF7A302498C9F1D5B15B /* DDBlockValueMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBlockValueMapper.m; sourceTree = "<group>"; };
 		BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDFoundationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB03522518ACE6E2001F0833 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB03523218ACE6E2001F0833 /* DDFoundationLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDFoundationLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +104,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3652B31C74222C366D16D497 /* mappings */ = {
+		3652B31C74222C366D16D497 /* mapping */ = {
 			isa = PBXGroup;
 			children = (
 				3652B24B85DB65568A2E2A35 /* DDMapping.h */,
@@ -106,8 +114,19 @@
 				3652B1DF21E4EB85F6BF427B /* DDHasOneMapping.h */,
 				3652BF62E9B2EE17337477C2 /* DDHasManyMapping.m */,
 				3652B64BE33DA12846A55313 /* DDHasManyMapping.h */,
+				3652BF7A302498C9F1D5B15B /* DDBlockValueMapper.m */,
+				3652B3F9E405BB70B5C4BD9F /* DDBlockValueMapper.h */,
 			);
-			path = mappings;
+			path = mapping;
+			sourceTree = "<group>";
+		};
+		3652B342143F32A5549081DB /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				3652BBA0E0D7D486ACD630D8 /* MockObjects.m */,
+				3652BA9D8CEA86C9F3B461FA /* MockObjects.h */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		3652B55417867F71E4B96B89 /* color */ = {
@@ -136,11 +155,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3652B8AEE312C0ADE75DDE44 /* mappings */ = {
+		3652B8AEE312C0ADE75DDE44 /* mapping */ = {
 			isa = PBXGroup;
 			children = (
+				3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */,
+				3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */,
+				3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */,
 			);
-			path = mappings;
+			path = mapping;
 			sourceTree = "<group>";
 		};
 		3652B901479622AD721E2271 /* color */ = {
@@ -150,13 +172,13 @@
 			path = color;
 			sourceTree = "<group>";
 		};
-		3652BB6AE1C91106806B5218 /* serialization */ = {
+		3652BB6AE1C91106806B5218 /* mapper */ = {
 			isa = PBXGroup;
 			children = (
-				3652B24C0417E52BC94A4C55 /* DDSerializerDeserializationTests.m */,
-				3652B8AEE312C0ADE75DDE44 /* mappings */,
+				3652B8AEE312C0ADE75DDE44 /* mapping */,
+				3652B6BFC4E6E56B567B1DFD /* DDMapperTests.m */,
 			);
-			path = serialization;
+			path = mapper;
 			sourceTree = "<group>";
 		};
 		3652BEEAC4909082466D3FC3 = {
@@ -185,7 +207,7 @@
 				BB03524A18ACE730001F0833 /* DDFoundation.h */,
 				BB03525018ACE730001F0833 /* additions */,
 				BB03525318ACE730001F0833 /* metrics */,
-				BB03525418ACE730001F0833 /* serialization */,
+				BB03525418ACE730001F0833 /* mapper */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -205,19 +227,16 @@
 			path = metrics;
 			sourceTree = "<group>";
 		};
-		BB03525418ACE730001F0833 /* serialization */ = {
+		BB03525418ACE730001F0833 /* mapper */ = {
 			isa = PBXGroup;
 			children = (
-				3652BE2CA670177893DCBDD1 /* DDSerializer.m */,
-				3652B2CD779331F8A9106EB0 /* DDSerializer.h */,
-				3652B1CBA876A6126454BFD3 /* DDSerializationMapping.m */,
-				3652B92ACA9E749847B878C9 /* DDSerializationMapping.h */,
-				3652BAAFC087BC6B2686ED9C /* DDValueSerializer.h */,
-				3652B6B766B0635A1E76224B /* DDBlockValueSerializer.m */,
-				3652B7269BFC2FAC559F6B69 /* DDBlockValueSerializer.h */,
-				3652B31C74222C366D16D497 /* mappings */,
+				3652BE2CA670177893DCBDD1 /* DDMapper.m */,
+				3652B2CD779331F8A9106EB0 /* DDMapper.h */,
+				3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */,
+				3652B92ACA9E749847B878C9 /* DDObjectMapping.h */,
+				3652B31C74222C366D16D497 /* mapping */,
 			);
-			path = serialization;
+			path = mapper;
 			sourceTree = "<group>";
 		};
 		BB03525818ACEF3E001F0833 /* tests */ = {
@@ -225,8 +244,9 @@
 			children = (
 				BB03527518ACF160001F0833 /* DDFoundationLibTests-Info.plist */,
 				BB03527618ACF160001F0833 /* DDFoundationLibTests-Prefix.pch */,
-				3652BB6AE1C91106806B5218 /* serialization */,
+				3652BB6AE1C91106806B5218 /* mapper */,
 				3652B58BE90AB1CDA4727BF3 /* additions */,
+				3652B342143F32A5549081DB /* mock */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -310,13 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3652B1CA576817EDC8940E76 /* DDSerializer.m in Sources */,
-				3652BB2C8E03A5ACC5ED1B16 /* DDSerializationMapping.m in Sources */,
-				3652BF1DACA0F6BC350002A8 /* DDBlockValueSerializer.m in Sources */,
+				3652B1CA576817EDC8940E76 /* DDMapper.m in Sources */,
+				3652BB2C8E03A5ACC5ED1B16 /* DDObjectMapping.m in Sources */,
 				3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */,
 				3652B8BFA040DFB4BD43D6DF /* DDHasOneMapping.m in Sources */,
 				3652B27BD231275B520E12D4 /* DDHasManyMapping.m in Sources */,
 				3652B41920BE285FDAE23DA6 /* UIColor+DDHexColorAdditions.m in Sources */,
+				3652B3CDD1EE4B5B9AF577DE /* MockObjects.m in Sources */,
+				3652BCEA799883D22B289A29 /* DDBlockValueMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3652BBAD6703B88DD3A32F98 /* DDSerializerDeserializationTests.m in Sources */,
+				BB933B5018B2812100B1558A /* DDMapperTests.m in Sources */,
+				3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */,
+				3652BD1FE8A8375164A540BE /* DDHasOneMappingTests.m in Sources */,
+				3652B9270F86D4AD4F4365E7 /* DDKeyFieldMappingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,15 +21,16 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDValueSerializer.h"
+#import "DDMapping.h"
 
 
-@interface DDBlockValueSerializer : NSObject <DDValueSerializer>
+@interface DDBlockValueMapper : NSObject <DDMapping>
 
-typedef id (^DDSerializeBlock)(id value, NSError** error);
-typedef id (^DDDeserializeBlock)(id value, NSError** error);
+typedef id (^DDMappingBlock)(id value, NSError** error);
 
-- (instancetype)initWithSerializeBlock:(DDSerializeBlock)serializeBlock
-                      deserializeBlock:(DDDeserializeBlock)deserializeBlock;
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+               mappingBlock:(DDMappingBlock)mapBlock
+        reverseMappingBlock:(DDMappingBlock)reverseMapBlock;
 
 @end

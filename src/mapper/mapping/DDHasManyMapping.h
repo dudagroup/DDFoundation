@@ -1,4 +1,4 @@
-// DDBlockValueSerializer.m
+// DDHasManyMapping.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,11 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DDBlockValueSerializer.h"
+#import <Foundation/Foundation.h>
+#import "DDMapping.h"
+
+@class DDObjectMapping;
 
 
-@implementation DDBlockValueSerializer
+@interface DDHasManyMapping : NSObject <DDMapping>
+
+extern NSString* const DDHasManyMappingErrorDomain;
+
+typedef enum
 {
+    DDDHasManyMappingErrorCodeUnderlyingMappingError = 1,
+    DDHasManyMappingErrorCodeValueIsRequired,
+    DDHasManyMappingErrorCodeNotAnArray
+} DDHasManyMappingErrorCode;
 
-}
+
+@property (nonatomic, readonly) NSString* key;
+@property (nonatomic, readonly) NSString* field;
+
+@property (nonatomic, readonly) BOOL required;
+
+@property (nonatomic, readonly) DDObjectMapping* mapping;
+
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+                    mapping:(DDObjectMapping*)mapping
+                   required:(BOOL)required;
+
 @end

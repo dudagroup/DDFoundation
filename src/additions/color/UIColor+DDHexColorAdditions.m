@@ -27,8 +27,6 @@
 
 + (UIColor*)colorFromRgba:(NSUInteger)colorValue
 {
-
-
     return nil;
 }
 

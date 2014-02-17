@@ -1,4 +1,4 @@
-// DDSerializer.h
+// DDHasOneMapping.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,27 +21,32 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "DDMapping.h"
 
-@class DDSerializationMapping;
+@class DDObjectMapping;
 
-/**
- * A simple but still powerful serializer/deserializer which, for example, can be used to
- * map data returned from a server to objects.
- */
-@interface DDSerializer : NSObject
 
-extern NSString* const DDSerializerErrorDomain;
+@interface DDHasOneMapping : NSObject <DDMapping>
+
+extern NSString* const DDHasOneMappingErrorDomain;
 
 typedef enum
 {
-    DDSerializerErrorCodeInvalidDictionary = 1,
-    DDSerializerErrorCodeInvalidObject,
-    DDSerializerErrorCodeSerializationError,
-    DDSerializerErrorCodeDeserializationError
-} DDSerializerErrorCode;
+    DDDHasOneMappingErrorCodeUnderlyingMappingError = 1,
+    DDHasOneMappingErrorCodeValueIsRequired
+} DDHasOneMappingErrorCode;
 
-+ (id)objectFromDictionary:(NSDictionary*)dictionary
-               withMapping:(DDSerializationMapping*)serializationMapping
-                     error:(NSError**)error;
+
+@property (nonatomic, readonly) NSString* key;
+@property (nonatomic, readonly) NSString* field;
+
+@property (nonatomic, readonly) BOOL required;
+
+@property (nonatomic, readonly) DDObjectMapping* objectMapping;
+
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+                    mapping:(DDObjectMapping*)mapping
+                   required:(BOOL)required;
 
 @end

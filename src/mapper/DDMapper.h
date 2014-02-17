@@ -1,4 +1,4 @@
-// DDHasManyMapping.h
+// DDSerializer.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,34 +21,30 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDMapping.h"
 
-@class DDSerializationMapping;
+@class DDObjectMapping;
 
+/**
+ * A simple but still powerful mapper/reverse mapper which, for example, can be used to
+ * map data returned from a server to objects.
+ */
+@interface DDMapper : NSObject
 
-@interface DDHasManyMapping : NSObject <DDMapping>
-
-extern NSString* const DDHasManyMappingErrorDomain;
+extern NSString* const DDSerializerErrorDomain;
 
 typedef enum
 {
-    DDHasManyMappingErrorCodeCouldNotDeserialize = 1,
-    DDDHasManyMappingErrorCodeCouldNotSerialize,
-    DDHasManyMappingErrorCodeValueIsRequired,
-    DDHasManyMappingErrorCodeNotAnArray
-} DDHasManyMappingErrorCode;
+    DDSerializerErrorCodeInvalidDictionary = 1,
+    DDSerializerErrorCodeInvalidObject,
+    DDSerializerErrorCodeMappingError
+} DDSerializerErrorCode;
 
++ (id)objectFromDictionary:(NSDictionary*)dictionary
+               withMapping:(DDObjectMapping*)objectMapping
+                     error:(NSError**)error;
 
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
-
-@property (nonatomic, readonly) BOOL required;
-
-@property (nonatomic, readonly) DDSerializationMapping* serializationMapping;
-
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-       serializationMapping:(DDSerializationMapping*)serializationMapping
-                   required:(BOOL)required;
++ (NSDictionary*)dictionaryFromObject:(id)object
+                          withMapping:(DDObjectMapping*)objectMapping
+                                error:(NSError**)error;
 
 @end
