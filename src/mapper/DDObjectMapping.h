@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDBlockValueMapper.h"
+#import "DDBlockValueMapping.h"
 
 
 @interface DDObjectMapping : NSObject
@@ -53,7 +53,6 @@ typedef void (^DDSerializationMappingFormatBlock)(NSString* mapping);
 
 - (void)mapKey:(NSString*)key
                 toField:(NSString*)field
-                  class:(Class)class
        withMappingBlock:(DDMappingBlock)mappingBlock
     reverseMappingBlock:(DDMappingBlock)reverseMappingBlock;
 

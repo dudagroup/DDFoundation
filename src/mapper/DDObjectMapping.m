@@ -81,13 +81,17 @@
 
 - (void)mapKey:(NSString*)key
                 toField:(NSString*)field
-                  class:(Class)class
        withMappingBlock:(DDMappingBlock)mappingBlock
     reverseMappingBlock:(DDMappingBlock)reverseMappingBlock
 {
+    DDBlockValueMapping* blockValueMapping =
+        [[DDBlockValueMapping alloc] initWithKey:key
+                                           field:field
+                                    mappingBlock:mappingBlock
+                             reverseMappingBlock:reverseMappingBlock];
 
+    [self addMapping:blockValueMapping];
 }
-
 
 - (void)hasOneMapping:(DDObjectMapping*)mapping forKey:(NSString*)key field:(NSString*)field required:(BOOL)required
 {

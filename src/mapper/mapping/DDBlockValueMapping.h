@@ -1,4 +1,4 @@
-// DDBlockValueSerializer.m
+// DDBlockValueSerializer.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,33 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DDBlockValueMapper.h"
+#import <Foundation/Foundation.h>
+#import "DDMapping.h"
 
 
-@implementation DDBlockValueMapper
-{
+@interface DDBlockValueMapping : NSObject <DDMapping>
 
-}
+typedef id (^DDMappingBlock)(id value, NSError** error);
+
+@property (nonatomic, readonly) NSString* key;
+@property (nonatomic, readonly) NSString* field;
+
+@property (nonatomic, readonly) DDMappingBlock mapBlock;
+@property (nonatomic, readonly) DDMappingBlock reverseMapBlock;
 
 - (instancetype)initWithKey:(NSString*)key
                       field:(NSString*)field
                mappingBlock:(DDMappingBlock)mapBlock
-        reverseMappingBlock:(DDMappingBlock)reverseMapBlock
-{
-    return nil;
-}
-
-- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error
-{
-
-}
-
-- (void)mapFromObject:(id)object
-         toDictionary:(NSMutableDictionary*)dictionary
-                error:(NSError**)error
-{
-
-}
-
+        reverseMappingBlock:(DDMappingBlock)reverseMapBlock;
 
 @end
