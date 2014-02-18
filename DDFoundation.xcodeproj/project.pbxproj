@@ -15,6 +15,7 @@
 		3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */; };
 		3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */; };
 		3652B8BFA040DFB4BD43D6DF /* DDHasOneMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA1FAFBA87B3F5840D1F /* DDHasOneMapping.m */; };
+		3652B8C5BE0C9CB631EECD4D /* DDDateValueMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B446EB6629A6D2D4265A /* DDDateValueMappingTests.m */; };
 		3652B9270F86D4AD4F4365E7 /* DDKeyFieldMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */; };
 		3652BB2C8E03A5ACC5ED1B16 /* DDObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */; };
 		3652BCEA799883D22B289A29 /* DDBlockValueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF7A302498C9F1D5B15B /* DDBlockValueMapping.m */; };
@@ -59,6 +60,7 @@
 		3652B2CD779331F8A9106EB0 /* DDMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMapper.h; sourceTree = "<group>"; };
 		3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDKeyFieldMappingTests.m; sourceTree = "<group>"; };
 		3652B3F9E405BB70B5C4BD9F /* DDBlockValueMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBlockValueMapping.h; sourceTree = "<group>"; };
+		3652B446EB6629A6D2D4265A /* DDDateValueMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDateValueMappingTests.m; sourceTree = "<group>"; };
 		3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasManyMappingTests.m; sourceTree = "<group>"; };
 		3652B5F5CBCC19EACE1385C1 /* DDKeyFieldMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDKeyFieldMapping.h; sourceTree = "<group>"; };
 		3652B64BE33DA12846A55313 /* DDHasManyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHasManyMapping.h; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */,
 				3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */,
 				3652B3E179ECA186C0630A44 /* DDKeyFieldMappingTests.m */,
+				3652B446EB6629A6D2D4265A /* DDDateValueMappingTests.m */,
 			);
 			path = mapping;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */,
 				3652BD1FE8A8375164A540BE /* DDHasOneMappingTests.m in Sources */,
 				3652B9270F86D4AD4F4365E7 /* DDKeyFieldMappingTests.m in Sources */,
+				3652B8C5BE0C9CB631EECD4D /* DDDateValueMappingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,15 @@
 
 + (UIColor*)colorFromRgba:(NSUInteger)colorValue
 {
-    return nil;
+    unsigned char red = (unsigned char)((colorValue & 0xFF000000) >> 24);
+    unsigned char blue = (unsigned char)((colorValue & 0x00FF0000) >> 16);
+    unsigned char green = (unsigned char)((colorValue & 0x0000FF00) >> 8);
+    unsigned char alpha = (unsigned char)(colorValue & 0x000000FF);
+
+    return [UIColor colorWithRed:red / 255.0f
+                           green:blue / 255.0f
+                            blue:green / 255.0f
+                           alpha:alpha / 255.0f];
 }
 
 + (UIColor*)colorFromRgbaString:(NSString*)rgbaString

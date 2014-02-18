@@ -30,14 +30,14 @@
  */
 @interface DDMapper : NSObject
 
-extern NSString* const DDSerializerErrorDomain;
+extern NSString* const DDMapperErrorDomain;
 
 typedef enum
 {
-    DDSerializerErrorCodeInvalidDictionary = 1,
-    DDSerializerErrorCodeInvalidObject,
-    DDSerializerErrorCodeMappingError
-} DDSerializerErrorCode;
+    DDMapperErrorCodeInvalidDictionary = 1,
+    DDMapperErrorCodeInvalidObject,
+    DDMapperErrorCodeMappingError
+} DDMapperErrorCode;
 
 + (id)objectFromDictionary:(NSDictionary*)dictionary
                withMapping:(DDObjectMapping*)objectMapping

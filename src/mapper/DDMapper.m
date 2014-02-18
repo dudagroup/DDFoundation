@@ -28,7 +28,7 @@
 
 }
 
-NSString* const DDSerializerErrorDomain = @"com.dudagroup.mapper";
+NSString* const DDMapperErrorDomain = @"com.dudagroup.mapper";
 
 
 + (id)objectFromDictionary:(NSDictionary*)dictionary
@@ -47,8 +47,8 @@ NSString* const DDSerializerErrorDomain = @"com.dudagroup.mapper";
                 NSLocalizedDescriptionKey: description
             };
 
-            *error = [NSError errorWithDomain:DDSerializerErrorDomain
-                                         code:DDSerializerErrorCodeInvalidDictionary
+            *error = [NSError errorWithDomain:DDMapperErrorDomain
+                                         code:DDMapperErrorCodeInvalidDictionary
                                      userInfo:userInfo];
         }
 
@@ -73,8 +73,8 @@ NSString* const DDSerializerErrorDomain = @"com.dudagroup.mapper";
                     NSUnderlyingErrorKey: underlyingError
                 };
 
-                *error = [NSError errorWithDomain:DDSerializerErrorDomain
-                                             code:DDSerializerErrorCodeMappingError
+                *error = [NSError errorWithDomain:DDMapperErrorDomain
+                                             code:DDMapperErrorCodeMappingError
                                          userInfo:userInfo];
             }
 
@@ -101,8 +101,8 @@ NSString* const DDSerializerErrorDomain = @"com.dudagroup.mapper";
                 NSLocalizedDescriptionKey: description
             };
 
-            *error = [NSError errorWithDomain:DDSerializerErrorDomain
-                                         code:DDSerializerErrorCodeInvalidDictionary
+            *error = [NSError errorWithDomain:DDMapperErrorDomain
+                                         code:DDMapperErrorCodeInvalidObject
                                      userInfo:userInfo];
         }
 
@@ -127,8 +127,8 @@ NSString* const DDSerializerErrorDomain = @"com.dudagroup.mapper";
                     NSUnderlyingErrorKey: underlyingError
                 };
 
-                *error = [NSError errorWithDomain:DDSerializerErrorDomain
-                                             code:DDSerializerErrorCodeMappingError
+                *error = [NSError errorWithDomain:DDMapperErrorDomain
+                                             code:DDMapperErrorCodeMappingError
                                          userInfo:userInfo];
             }
 

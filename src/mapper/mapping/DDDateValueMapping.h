@@ -8,6 +8,25 @@
 
 @interface DDDateValueMapping : NSObject <DDMapping>
 
+extern NSString* const DDDateValueMappingErrorDomain;
 
+typedef enum
+{
+    DDDateValueMappingErrorCodeNotAString,
+    DDDateValueMappingErrorCodeCouldNotFormat
+} DDDateValueMappingErrorCode;
+
+@property (nonatomic, readonly) NSString* key;
+@property (nonatomic, readonly) NSString* field;
+
+@property (nonatomic, readonly) BOOL required;
+
+@property (nonatomic, readonly) NSDateFormatter* dateFormatter;
+
+- (instancetype)initWithKey:(NSString*)key
+                      field:(NSString*)field
+                   required:(BOOL)required
+                 dateFormat:(NSString*)dateFormat
+                   timeZone:(NSTimeZone*)timeZone;
 
 @end
