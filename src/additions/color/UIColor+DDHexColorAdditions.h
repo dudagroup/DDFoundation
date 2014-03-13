@@ -40,7 +40,7 @@
 + (UIColor*)colorFromRgba:(NSUInteger)colorValue;
 
 /**
- Return a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
+ Returns a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
 
      [UIColor colorFromRgbaString:@"#FF0000CC"]; // Creates a semi transparent red.
      // Or
@@ -69,7 +69,7 @@
 + (UIColor*)colorFromArgb:(NSUInteger)colorValue;
 
 /**
- Return a UIColor with a provided RGBA (Alpha, Red, Green, Blue) color.
+ Returns a UIColor with a provided RGBA (Alpha, Red, Green, Blue) color.
 
      [UIColor colorFromRgbaString:@"#CCFF0000"]; // Creates a semi transparent red.
      // Or
@@ -82,5 +82,30 @@
  @return UIColor with the provided RGBA color.
  */
 + (UIColor*)colorFromArgbString:(NSString*)argbString;
+
+///=================================================================================================
+/// @name Helpers
+///=================================================================================================
+
+/**
+ Returns a random opaque UIColor.
+
+ @return Random opaque UIColor.
+ */
++ (UIColor*)randomColor;
+
+/**
+ Returns a random UIColor with a random alpha component.
+
+ @return Random UIColor with a random alpha component.
+ */
++ (UIColor*)randomColorWithRandomAlpha;
+
+/**
+ Returns a random UIColor with the provided alpha component.
+
+ @return Random UIColor with the provided alpha component.
+ */
++ (UIColor*)randomColorWithAlpha:(CGFloat)alpha;
 
 @end

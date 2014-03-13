@@ -21,16 +21,48 @@
 // THE SOFTWARE.
 
 #import "UIColor+DDHexColorAdditions.h"
+#import "DDMathUtils.h"
 
 
 @implementation UIColor (DDHexColorAdditions)
 
 + (UIColor*)colorFromRgba:(NSUInteger)colorValue
 {
-    unsigned char red = (unsigned char)((colorValue & 0xFF000000) >> 24);
-    unsigned char blue = (unsigned char)((colorValue & 0x00FF0000) >> 16);
-    unsigned char green = (unsigned char)((colorValue & 0x0000FF00) >> 8);
-    unsigned char alpha = (unsigned char)(colorValue & 0x000000FF);
+    NSUInteger defaultedColorValue = colorValue;
+
+    if (colorValue <= 0xF)
+    {
+        defaultedColorValue = (colorValue << 28) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFF)
+    {
+        defaultedColorValue = (colorValue << 24) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFFF)
+    {
+        defaultedColorValue = (colorValue << 20) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFFFF)
+    {
+        defaultedColorValue = (colorValue << 16) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFFFFF)
+    {
+        defaultedColorValue = (colorValue << 12) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFFFFFF)
+    {
+        defaultedColorValue = (colorValue << 8) + 0x000000FF;
+    }
+    else if (colorValue <= 0xFFFFFFF)
+    {
+        defaultedColorValue = (colorValue << 4);
+    }
+
+    unsigned char red = (unsigned char)((defaultedColorValue & 0xFF000000) >> 24);
+    unsigned char blue = (unsigned char)((defaultedColorValue & 0x00FF0000) >> 16);
+    unsigned char green = (unsigned char)((defaultedColorValue & 0x0000FF00) >> 8);
+    unsigned char alpha = (unsigned char)(defaultedColorValue & 0x000000FF);
 
     return [UIColor colorWithRed:red / 255.0f
                            green:blue / 255.0f
@@ -51,6 +83,23 @@
 + (UIColor*)colorFromArgbString:(NSString*)argbString
 {
     return nil;
+}
+
++ (UIColor*)randomColor
+{
+    NSUInteger randomRgb = DDRandomUnsignedIntegerWithUpperBound(0xFFFFFF);
+    return [UIColor colorFromRgba:randomRgb];
+}
+
++ (UIColor*)randomColorWithRandomAlpha
+{
+    NSUInteger randomRgba = DDRandomUnsignedIntegerWithUpperBound(0xFFFFFFFF);
+    return [UIColor colorFromRgba:randomRgba];
+}
+
++ (UIColor*)randomColorWithAlpha:(CGFloat)alpha
+{
+    return [[UIColor randomColor] colorWithAlphaComponent:alpha];
 }
 
 
