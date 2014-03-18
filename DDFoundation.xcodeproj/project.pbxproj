@@ -11,9 +11,10 @@
 		3652B27BD231275B520E12D4 /* DDHasManyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF62E9B2EE17337477C2 /* DDHasManyMapping.m */; };
 		3652B3CDD1EE4B5B9AF577DE /* MockObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BBA0E0D7D486ACD630D8 /* MockObjects.m */; };
 		3652B3E93B144A1C79672185 /* NSArray+DDShufflingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B00D25A8BD264E617D21 /* NSArray+DDShufflingAdditions.m */; };
-		3652B41920BE285FDAE23DA6 /* UIColor+DDHexColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA70C853C2716681A779 /* UIColor+DDHexColorAdditions.m */; };
+		3652B41920BE285FDAE23DA6 /* UIColor+DDColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA70C853C2716681A779 /* UIColor+DDColorAdditions.m */; };
 		3652B509F7FD70D729CC9B50 /* DDMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BC30C5E3ADB73FA20DED /* DDMathUtils.m */; };
 		3652B53D00F65C1CD9077D04 /* DDDateValueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BCFBDECF4271D7D097B0 /* DDDateValueMapping.m */; };
+		3652B672E37423894E56C4FF /* UIButton+DDHitAreaInsetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BAABB11AF3821AB34E44 /* UIButton+DDHitAreaInsetAdditions.m */; };
 		3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */; };
 		3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */; };
 		3652B8BFA040DFB4BD43D6DF /* DDHasOneMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA1FAFBA87B3F5840D1F /* DDHasOneMapping.m */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		3652B00D25A8BD264E617D21 /* NSArray+DDShufflingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDShufflingAdditions.m"; sourceTree = "<group>"; };
 		3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasOneMappingTests.m; sourceTree = "<group>"; };
+		3652B0626594C7B045D1909B /* UIButton+DDHitAreaInsetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDHitAreaInsetAdditions.h"; sourceTree = "<group>"; };
 		3652B172EB73010A7BD629D4 /* DDDateValueMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDateValueMapping.h; sourceTree = "<group>"; };
 		3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDObjectMapping.m; sourceTree = "<group>"; };
 		3652B1DF21E4EB85F6BF427B /* DDHasOneMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHasOneMapping.h; sourceTree = "<group>"; };
@@ -70,12 +72,13 @@
 		3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDKeyFieldMapping.m; sourceTree = "<group>"; };
 		3652B6BFC4E6E56B567B1DFD /* DDMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMapperTests.m; sourceTree = "<group>"; };
 		3652B716733D9848E7E410C8 /* DDMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathUtils.h; sourceTree = "<group>"; };
-		3652B883E56A2233DA76A81B /* UIColor+DDHexColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDHexColorAdditions.h"; sourceTree = "<group>"; };
+		3652B883E56A2233DA76A81B /* UIColor+DDColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDColorAdditions.h"; sourceTree = "<group>"; };
 		3652B92ACA9E749847B878C9 /* DDObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDObjectMapping.h; sourceTree = "<group>"; };
 		3652B9C8C0F94E4C2F37E0B5 /* NSArray+DDShufflingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDShufflingAdditions.h"; sourceTree = "<group>"; };
 		3652BA1FAFBA87B3F5840D1F /* DDHasOneMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasOneMapping.m; sourceTree = "<group>"; };
-		3652BA70C853C2716681A779 /* UIColor+DDHexColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDHexColorAdditions.m"; sourceTree = "<group>"; };
+		3652BA70C853C2716681A779 /* UIColor+DDColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDColorAdditions.m"; sourceTree = "<group>"; };
 		3652BA9D8CEA86C9F3B461FA /* MockObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockObjects.h; sourceTree = "<group>"; };
+		3652BAABB11AF3821AB34E44 /* UIButton+DDHitAreaInsetAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDHitAreaInsetAdditions.m"; sourceTree = "<group>"; };
 		3652BBA0E0D7D486ACD630D8 /* MockObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockObjects.m; sourceTree = "<group>"; };
 		3652BC30C5E3ADB73FA20DED /* DDMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathUtils.m; sourceTree = "<group>"; };
 		3652BCFBDECF4271D7D097B0 /* DDDateValueMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDateValueMapping.m; sourceTree = "<group>"; };
@@ -115,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3652B2CA7FDF56E15137F856 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				3652BAABB11AF3821AB34E44 /* UIButton+DDHitAreaInsetAdditions.m */,
+				3652B0626594C7B045D1909B /* UIButton+DDHitAreaInsetAdditions.h */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
 		3652B31C74222C366D16D497 /* mapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +157,8 @@
 		3652B55417867F71E4B96B89 /* color */ = {
 			isa = PBXGroup;
 			children = (
-				3652B883E56A2233DA76A81B /* UIColor+DDHexColorAdditions.h */,
-				3652BA70C853C2716681A779 /* UIColor+DDHexColorAdditions.m */,
+				3652B883E56A2233DA76A81B /* UIColor+DDColorAdditions.h */,
+				3652BA70C853C2716681A779 /* UIColor+DDColorAdditions.m */,
 			);
 			path = color;
 			sourceTree = "<group>";
@@ -250,6 +262,7 @@
 			children = (
 				3652B55417867F71E4B96B89 /* color */,
 				3652BF9EBB862BCEFAF797A5 /* array */,
+				3652B2CA7FDF56E15137F856 /* button */,
 			);
 			path = additions;
 			sourceTree = "<group>";
@@ -369,12 +382,13 @@
 				3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */,
 				3652B8BFA040DFB4BD43D6DF /* DDHasOneMapping.m in Sources */,
 				3652B27BD231275B520E12D4 /* DDHasManyMapping.m in Sources */,
-				3652B41920BE285FDAE23DA6 /* UIColor+DDHexColorAdditions.m in Sources */,
+				3652B41920BE285FDAE23DA6 /* UIColor+DDColorAdditions.m in Sources */,
 				3652B3CDD1EE4B5B9AF577DE /* MockObjects.m in Sources */,
 				3652BCEA799883D22B289A29 /* DDBlockValueMapping.m in Sources */,
 				3652B53D00F65C1CD9077D04 /* DDDateValueMapping.m in Sources */,
 				3652B509F7FD70D729CC9B50 /* DDMathUtils.m in Sources */,
 				3652B3E93B144A1C79672185 /* NSArray+DDShufflingAdditions.m in Sources */,
+				3652B672E37423894E56C4FF /* UIButton+DDHitAreaInsetAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

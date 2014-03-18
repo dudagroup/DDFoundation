@@ -23,11 +23,21 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIColor (DDHexColorAdditions)
+@interface UIColor (DDColorAdditions)
 
 ///=================================================================================================
-/// @name RGBA
+/// @name Creating Colors
 ///=================================================================================================
+
+/**
+ Returns a UIColor with a provided RGB (Red, Green, Blue) color.
+
+     [UIColor colorFromRgba:0xFF0000]; // Creates a red.
+
+ @param colorValue RGB integer e.g. 0xFF0000 for a red.
+ @return UIColor with the provided RGB color.
+ */
++ (UIColor*)colorFromRgb:(NSUInteger)colorValue;
 
 /**
  Returns a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
@@ -53,35 +63,6 @@
  @return UIColor with the provided RGBA color.
  */
 + (UIColor*)colorFromRgbaString:(NSString*)rgbaString;
-
-///=================================================================================================
-/// @name ARGB
-///=================================================================================================
-
-/**
- Returns a UIColor with a provided ARGB (Alpha, Red, Green, Blue) color.
-
-     [UIColor colorFromRgba:0xCCFF0000]; // Creates a semi transparent red.
-
- @param colorValue RGBA integer e.g. 0xCCFF0000 for a semi transparent red.
- @return UIColor with the provided ARGB color.
- */
-+ (UIColor*)colorFromArgb:(NSUInteger)colorValue;
-
-/**
- Returns a UIColor with a provided RGBA (Alpha, Red, Green, Blue) color.
-
-     [UIColor colorFromRgbaString:@"#CCFF0000"]; // Creates a semi transparent red.
-     // Or
-     [UIColor colorFromRgbaString:@"CCFF0000"];
-     // Or
-     [UIColor colorFromRgbaString:@"0xCCFF0000"];
-
- @param rgbaString A string representing a color in hexadecimal, prefixes like '0x' or '#' will be
-                   ignored.
- @return UIColor with the provided RGBA color.
- */
-+ (UIColor*)colorFromArgbString:(NSString*)argbString;
 
 ///=================================================================================================
 /// @name Helpers
