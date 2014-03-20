@@ -14,6 +14,7 @@
 		3652B41920BE285FDAE23DA6 /* UIColor+DDColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BA70C853C2716681A779 /* UIColor+DDColorAdditions.m */; };
 		3652B509F7FD70D729CC9B50 /* DDMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BC30C5E3ADB73FA20DED /* DDMathUtils.m */; };
 		3652B53D00F65C1CD9077D04 /* DDDateValueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BCFBDECF4271D7D097B0 /* DDDateValueMapping.m */; };
+		3652B5C0E0D73535E2A19301 /* NSBundle+DDAppInformationAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF10F15B6B75E3B39157 /* NSBundle+DDAppInformationAddition.m */; };
 		3652B672E37423894E56C4FF /* UIButton+DDHitAreaInsetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BAABB11AF3821AB34E44 /* UIButton+DDHitAreaInsetAdditions.m */; };
 		3652B70D9B2C2CEE097FF371 /* DDKeyFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B64DDE423CC51001271E /* DDKeyFieldMapping.m */; };
 		3652B86F3627610109AF283B /* DDHasManyMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B459B01076BAB43A7C93 /* DDHasManyMappingTests.m */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		3652B00D25A8BD264E617D21 /* NSArray+DDShufflingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDShufflingAdditions.m"; sourceTree = "<group>"; };
 		3652B01E5649E48A8D7D707F /* DDHasOneMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasOneMappingTests.m; sourceTree = "<group>"; };
+		3652B02C6D7582F05A57F4E3 /* NSBundle+DDAppInformationAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DDAppInformationAddition.h"; sourceTree = "<group>"; };
 		3652B0626594C7B045D1909B /* UIButton+DDHitAreaInsetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDHitAreaInsetAdditions.h"; sourceTree = "<group>"; };
 		3652B172EB73010A7BD629D4 /* DDDateValueMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDateValueMapping.h; sourceTree = "<group>"; };
 		3652B1CBA876A6126454BFD3 /* DDObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDObjectMapping.m; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		3652BC30C5E3ADB73FA20DED /* DDMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathUtils.m; sourceTree = "<group>"; };
 		3652BCFBDECF4271D7D097B0 /* DDDateValueMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDateValueMapping.m; sourceTree = "<group>"; };
 		3652BE2CA670177893DCBDD1 /* DDMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMapper.m; sourceTree = "<group>"; };
+		3652BF10F15B6B75E3B39157 /* NSBundle+DDAppInformationAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DDAppInformationAddition.m"; sourceTree = "<group>"; };
 		3652BF62E9B2EE17337477C2 /* DDHasManyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHasManyMapping.m; sourceTree = "<group>"; };
 		3652BF7A302498C9F1D5B15B /* DDBlockValueMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBlockValueMapping.m; sourceTree = "<group>"; };
 		BB03522318ACE6E2001F0833 /* libDDFoundationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDFoundationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3652B033A3D906E68A9315FB /* bundle */ = {
+			isa = PBXGroup;
+			children = (
+				3652BF10F15B6B75E3B39157 /* NSBundle+DDAppInformationAddition.m */,
+				3652B02C6D7582F05A57F4E3 /* NSBundle+DDAppInformationAddition.h */,
+			);
+			path = bundle;
+			sourceTree = "<group>";
+		};
 		3652B2CA7FDF56E15137F856 /* button */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +275,7 @@
 				3652B55417867F71E4B96B89 /* color */,
 				3652BF9EBB862BCEFAF797A5 /* array */,
 				3652B2CA7FDF56E15137F856 /* button */,
+				3652B033A3D906E68A9315FB /* bundle */,
 			);
 			path = additions;
 			sourceTree = "<group>";
@@ -389,6 +402,7 @@
 				3652B509F7FD70D729CC9B50 /* DDMathUtils.m in Sources */,
 				3652B3E93B144A1C79672185 /* NSArray+DDShufflingAdditions.m in Sources */,
 				3652B672E37423894E56C4FF /* UIButton+DDHitAreaInsetAdditions.m in Sources */,
+				3652B5C0E0D73535E2A19301 /* NSBundle+DDAppInformationAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
