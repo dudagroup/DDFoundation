@@ -9,12 +9,12 @@
 
 - (NSString*)appName
 {
-    [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    return [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
 - (NSString*)appVersion
 {
-    [self objectForInfoDictionaryKey:@"CFBundleVersion"];
+    return [self objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
 @end
