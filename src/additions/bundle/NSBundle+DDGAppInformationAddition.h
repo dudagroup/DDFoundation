@@ -1,4 +1,4 @@
-// DDBlockValueSerializer.h
+// UIColor+DDGAppInformationAddition.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,22 +21,22 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDMapping.h"
 
 
-@interface DDBlockValueMapping : NSObject <DDMapping>
+@interface NSBundle (DDGAppInformationAddition)
 
-typedef id (^DDMappingBlock)(id value, NSError** error);
+/**
+ Returns the name of the application.
 
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
+ @return The name of the application.
+ */
+@property (nonatomic, readonly) NSString* appName;
 
-@property (nonatomic, readonly) DDMappingBlock mapBlock;
-@property (nonatomic, readonly) DDMappingBlock reverseMapBlock;
+/**
+ Returns the version of the application.
 
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-               mappingBlock:(DDMappingBlock)mapBlock
-        reverseMappingBlock:(DDMappingBlock)reverseMapBlock;
+ @return The version of the application.
+ */
+@property (nonatomic, readonly) NSString* appVersion;
 
 @end

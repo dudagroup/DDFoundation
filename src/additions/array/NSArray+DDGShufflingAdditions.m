@@ -1,4 +1,4 @@
-// DDHasManyMapping.h
+// UIColor+DDGShufflingAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,34 +20,36 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "DDMapping.h"
-
-@class DDObjectMapping;
+#import "NSArray+DDGShufflingAdditions.h"
+#import "DDGMathUtils.h"
 
 
-@interface DDHasManyMapping : NSObject <DDMapping>
+@implementation NSArray (DDGShufflingAdditions)
 
-extern NSString* const DDHasManyMappingErrorDomain;
-
-typedef enum
+- (NSArray*)shuffledArray
 {
-    DDDHasManyMappingErrorCodeUnderlyingMappingError = 1,
-    DDHasManyMappingErrorCodeValueIsRequired,
-    DDHasManyMappingErrorCodeNotAnArray
-} DDHasManyMappingErrorCode;
+    NSMutableArray* mutableArray = [self mutableCopy];
+    [mutableArray shuffle];
 
+    return [mutableArray copy];
+}
 
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
+@end
 
-@property (nonatomic, readonly) BOOL required;
+@implementation NSMutableArray (DDGShufflingAdditions)
 
-@property (nonatomic, readonly) DDObjectMapping* mapping;
+- (void)shuffle
+{
+    NSUInteger count = self.count;
 
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-                    mapping:(DDObjectMapping*)mapping
-                   required:(BOOL)required;
+    if (count > 1)
+    {
+        for (NSUInteger i = count - 1; i > 0; --i)
+        {
+            [self exchangeObjectAtIndex:i
+                      withObjectAtIndex:DDGRandomUnsignedIntegerWithUpperBound(i + 1)];
+        }
+    }
+}
 
 @end

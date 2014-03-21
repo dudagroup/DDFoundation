@@ -1,4 +1,4 @@
-// DDMapping.h
+// DDGMathUtils.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -22,9 +22,30 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DDMapping <NSObject>
+/**
+ Returns a random NSUInteger approximately between 0 and 4294967295.
 
-- (void)mapFromDictionary:(NSDictionary*)dictionary toObject:(id)object error:(NSError**)error;
-- (void)mapFromObject:(id)object toDictionary:(NSMutableDictionary*)dictionary error:(NSError**)error;
+ @see UINT32_MAX
+ @see arc4random
 
-@end
+ @return A random NSUInteger approximately between 0 and 4294967295.
+ */
+NSUInteger DDGRandomUnsignedInteger();
+
+/**
+ Returns a random NSUInteger approximately between 0 and the provided upper bound.
+
+ @see arc4random_uniform
+
+ @return A random NSUInteger approximately between 0 and the provided upper bound.
+ */
+NSUInteger DDGRandomUnsignedIntegerWithUpperBound(NSUInteger upperBound);
+
+/**
+ Returns a random double between 0 and 1.
+
+ @see drand48
+
+ @return A random double between 0 and 1.
+ */
+double DDGRandomDouble();

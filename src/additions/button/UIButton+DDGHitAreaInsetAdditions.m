@@ -1,4 +1,4 @@
-// DDSerializer.h
+// UIColor+DDGHitAreaInsetAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,31 +20,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "UIButton+DDGHitAreaInsetAdditions.h"
 
-@class DDObjectMapping;
+#import <objc/runtime.h>
 
-/**
- * A simple but still powerful mapper/reverse mapper which, for example, can be used to
- * map data returned from a server to objects.
- */
-@interface DDMapper : NSObject
 
-extern NSString* const DDMapperErrorDomain;
+@implementation UIButton (DDGHitAreaInsetAdditions)
 
-typedef enum
+@dynamic hitAreaInset;
+
+static void* const HitAreaInsetKey = (void* const)&HitAreaInsetKey;
+
+- (void)setHitAreaInset:(UIEdgeInsets)hitAreaInset
 {
-    DDMapperErrorCodeInvalidDictionary = 1,
-    DDMapperErrorCodeInvalidObject,
-    DDMapperErrorCodeMappingError
-} DDMapperErrorCode;
+    NSValue* value = [NSValue valueWithUIEdgeInsets:hitAreaInset];
+    objc_setAssociatedObject(self, HitAreaInsetKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
-+ (id)objectFromDictionary:(NSDictionary*)dictionary
-               withMapping:(DDObjectMapping*)objectMapping
-                     error:(NSError**)error;
+- (UIEdgeInsets)hitAreaInset
+{
+    NSValue* value = objc_getAssociatedObject(self, HitAreaInsetKey);
+    return value.UIEdgeInsetsValue;
+}
 
-+ (NSDictionary*)dictionaryFromObject:(id)object
-                          withMapping:(DDObjectMapping*)objectMapping
-                                error:(NSError**)error;
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
+{
+    CGRect hitTestArea = UIEdgeInsetsInsetRect(self.bounds, self.hitAreaInset);
+    return CGRectContainsPoint(hitTestArea, point);
+}
 
 @end

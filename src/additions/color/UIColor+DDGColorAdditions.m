@@ -1,4 +1,4 @@
-// UIColor+DDHexColorAdditions.m
+// UIColor+DDGHexColorAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDColorAdditions.h"
-#import "DDMathUtils.h"
+#import "UIColor+DDGColorAdditions.h"
+#import "DDGMathUtils.h"
 
 
-@implementation UIColor (DDColorAdditions)
+@implementation UIColor (DDGColorAdditions)
 
 + (UIColor*)colorFromRgb:(NSUInteger)colorValue
 {
@@ -51,20 +51,15 @@
                            alpha:alpha / 255.0f];
 }
 
-+ (UIColor*)colorFromRgbaString:(NSString*)rgbaString
-{
-    return nil;
-}
-
 + (UIColor*)randomColor
 {
-    NSUInteger randomRgb = DDRandomUnsignedIntegerWithUpperBound(0xFFFFFF);
+    NSUInteger randomRgb = DDGRandomUnsignedIntegerWithUpperBound(0xFFFFFF);
     return [UIColor colorFromRgb:randomRgb];
 }
 
 + (UIColor*)randomColorWithRandomAlpha
 {
-    NSUInteger randomRgba = DDRandomUnsignedIntegerWithUpperBound(0xFFFFFFFF);
+    NSUInteger randomRgba = DDGRandomUnsignedIntegerWithUpperBound(0xFFFFFFFF);
     return [UIColor colorFromRgba:randomRgba];
 }
 

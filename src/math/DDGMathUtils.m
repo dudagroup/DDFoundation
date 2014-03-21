@@ -1,4 +1,4 @@
-// DDHasOneMapping.h
+// DDGMathUtils.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,33 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "DDMapping.h"
-
-@class DDObjectMapping;
+#import "DDGMathUtils.h"
 
 
-@interface DDHasOneMapping : NSObject <DDMapping>
-
-extern NSString* const DDHasOneMappingErrorDomain;
-
-typedef enum
+NSUInteger DDGRandomUnsignedInteger()
 {
-    DDDHasOneMappingErrorCodeUnderlyingMappingError = 1,
-    DDHasOneMappingErrorCodeValueIsRequired
-} DDHasOneMappingErrorCode;
+    return arc4random();
+}
 
+NSUInteger DDGRandomUnsignedIntegerWithUpperBound(NSUInteger upperBound)
+{
+    return arc4random_uniform((u_int32_t)upperBound);
+}
 
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
+double DDGRandomDouble()
+{
+    static dispatch_once_t Once;
 
-@property (nonatomic, readonly) BOOL required;
+    dispatch_once(&Once, ^
+    {
+        srand48(time(0));
+    });
 
-@property (nonatomic, readonly) DDObjectMapping* objectMapping;
-
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-                    mapping:(DDObjectMapping*)mapping
-                   required:(BOOL)required;
-
-@end
+    return drand48();
+}

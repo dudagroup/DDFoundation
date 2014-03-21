@@ -1,4 +1,4 @@
-// DDFoundation.h
+// UIColor+DDGHitAreaInsetAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,6 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDColorAdditions.h"
-#import "NSArray+DDShufflingAdditions.h"
-#import "UIButton+DDHitAreaInsetAdditions.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+@interface UIButton (DDGHitAreaInsetAdditions)
+
+@property (nonatomic) UIEdgeInsets hitAreaInset;
+
+@end

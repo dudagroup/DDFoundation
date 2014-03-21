@@ -1,4 +1,4 @@
-// DDSerializationMapping.h
+// UIColor+DDGHexColorAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,51 +21,57 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "DDBlockValueMapping.h"
+#import <UIKit/UIKit.h>
 
-
-@interface DDObjectMapping : NSObject
-
-typedef void (^DDSerializationMappingConstructionBlock)(DDObjectMapping* mapping);
-typedef void (^DDSerializationMappingFormatBlock)(NSString* mapping);
+@interface UIColor (DDGColorAdditions)
 
 ///=================================================================================================
-/// @name Create Mapping
+/// @name Creating Colors
 ///=================================================================================================
 
-+ (instancetype)mappingWithClass:(Class)class
-           withConstructionBlock:(DDSerializationMappingConstructionBlock)constructionBlock;
+/**
+ Returns a UIColor with a provided RGB (Red, Green, Blue) color.
 
-- (instancetype)initWithClass:(Class)class;
+     [UIColor colorFromRgba:0xFF0000]; // Creates a red.
 
-@property (nonatomic, readonly) Class objectClass;
-@property (nonatomic, readonly) NSArray* mappings;
+ @param colorValue RGB integer e.g. 0xFF0000 for a red.
+ @return UIColor with the provided RGB color.
+ */
++ (UIColor*)colorFromRgb:(NSUInteger)colorValue;
+
+/**
+ Returns a UIColor with a provided RGBA (Red, Green, Blue, Alpha) color.
+
+     [UIColor colorFromRgba:0xFF0000CC]; // Creates a semi transparent red.
+
+ @param colorValue RGBA integer e.g. 0xFF0000CC for a semi transparent red.
+ @return UIColor with the provided RGBA color.
+ */
++ (UIColor*)colorFromRgba:(NSUInteger)colorValue;
 
 ///=================================================================================================
-/// @name Map Properties
+/// @name Helpers
 ///=================================================================================================
 
-- (void)mapKey:(NSString*)key
-       toField:(NSString*)field
-         class:(Class)class
-      required:(BOOL)required
-        strict:(BOOL)strict;
+/**
+ Returns a random opaque UIColor.
 
-- (void)mapKey:(NSString*)key
-                toField:(NSString*)field
-       withMappingBlock:(DDMappingBlock)mappingBlock
-    reverseMappingBlock:(DDMappingBlock)reverseMappingBlock;
+ @return Random opaque UIColor.
+ */
++ (UIColor*)randomColor;
 
-- (void)hasOneMapping:(DDObjectMapping*)mapping
-               forKey:(NSString*)key
-                field:(NSString*)field
-             required:(BOOL)required;
+/**
+ Returns a random UIColor with a random alpha component.
 
-- (void)hasManyMapping:(DDObjectMapping*)mapping
-                forKey:(NSString*)key
-                 field:(NSString*)field
-              required:(BOOL)required;
+ @return Random UIColor with a random alpha component.
+ */
++ (UIColor*)randomColorWithRandomAlpha;
 
-- (void)addMapping:(id<DDMapping>)mapping;
+/**
+ Returns a random UIColor with the provided alpha component.
+
+ @return Random UIColor with the provided alpha component.
+ */
++ (UIColor*)randomColorWithAlpha:(CGFloat)alpha;
 
 @end

@@ -1,4 +1,4 @@
-// DDKeyFieldMapping.h
+// UIColor+DDGAppInformationAddition.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,34 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "DDMapping.h"
+#import "NSBundle+DDGAppInformationAddition.h"
 
 
-@interface DDKeyFieldMapping : NSObject <DDMapping>
+@implementation NSBundle (DDGAppInformationAddition)
 
-extern NSString* const DDKeyFieldMappingErrorDomain;
-
-typedef enum
+- (NSString*)appName
 {
-    DDKeyFieldMappingErrorCodeValueIsRequired = 1,
-    DDKeyFieldMappingErrorCodeValueHasWrongType,
-    DDKeyFieldMappingErrorCodeValueCouldNotConvert
+    return [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+}
 
-} DDKeyFieldMappingErrorCode;
-
-@property (nonatomic, readonly) NSString* key;
-@property (nonatomic, readonly) NSString* field;
-
-@property (nonatomic, readonly) Class class;
-
-@property (nonatomic, readonly) BOOL strict;
-@property (nonatomic, readonly) BOOL required;
-
-- (instancetype)initWithKey:(NSString*)key
-                      field:(NSString*)field
-                      class:(Class)class
-                   required:(BOOL)required
-                     strict:(BOOL)strict;
+- (NSString*)appVersion
+{
+    return [self objectForInfoDictionaryKey:@"CFBundleVersion"];
+}
 
 @end
