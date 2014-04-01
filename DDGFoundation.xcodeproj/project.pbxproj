@@ -12,12 +12,22 @@
 		3652B509F7FD70D729CC9B50 /* DDGMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BC30C5E3ADB73FA20DED /* DDGMathUtils.m */; };
 		3652B5C0E0D73535E2A19301 /* NSBundle+DDGAppInformationAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF10F15B6B75E3B39157 /* NSBundle+DDGAppInformationAddition.m */; };
 		3652B672E37423894E56C4FF /* UIButton+DDGHitAreaInsetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BAABB11AF3821AB34E44 /* UIButton+DDGHitAreaInsetAdditions.m */; };
+		3652B9D090BBBF1154ED1C3A /* DDGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B3920985DEA931E3C8B0 /* DDGNavigationController.m */; };
+		3652BC7A7CBAA8E287CD7A69 /* DDGScreenEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */; };
+		3652BCB4D5F382C2A2019EA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652BCC2B454720506C50749 /* UIKit.framework */; };
 		BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
 		BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523318ACE6E2001F0833 /* XCTest.framework */; };
 		BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
-		BB03523718ACE6E2001F0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523618ACE6E2001F0833 /* UIKit.framework */; };
 		BB03523A18ACE6E2001F0833 /* libDDGFoundationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522318ACE6E2001F0833 /* libDDGFoundationLib.a */; };
 		BB03527718ACF160001F0833 /* DDGFoundationLibTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB03527518ACF160001F0833 /* DDGFoundationLibTests-Info.plist */; };
+		BB4F066818EAD2CD005B75E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
+		BB4F066A18EAD2CD005B75E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4F066918EAD2CD005B75E6 /* CoreGraphics.framework */; };
+		BB4F067118EAD2CD005B75E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB4F066F18EAD2CD005B75E6 /* InfoPlist.strings */; };
+		BB4F067318EAD2CD005B75E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4F067218EAD2CD005B75E6 /* main.m */; };
+		BB4F067718EAD2CD005B75E6 /* DDGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4F067618EAD2CD005B75E6 /* DDGAppDelegate.m */; };
+		BB4F067918EAD2CD005B75E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4F067818EAD2CD005B75E6 /* Images.xcassets */; };
+		BB4F069218EAD5FF005B75E6 /* libDDGFoundationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522318ACE6E2001F0833 /* libDDGFoundationLib.a */; };
+		BB4F069518EAD8A4005B75E6 /* DDGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B65CC1173EAABEBFCE9E /* DDGTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,21 +56,36 @@
 		3652B00D25A8BD264E617D21 /* NSArray+DDGShufflingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDGShufflingAdditions.m"; sourceTree = "<group>"; };
 		3652B02C6D7582F05A57F4E3 /* NSBundle+DDGAppInformationAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DDGAppInformationAddition.h"; sourceTree = "<group>"; };
 		3652B0626594C7B045D1909B /* UIButton+DDGHitAreaInsetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDGHitAreaInsetAdditions.h"; sourceTree = "<group>"; };
+		3652B1678D25229C9CD0BEB4 /* DDGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGTestViewController.h; sourceTree = "<group>"; };
+		3652B2E7F63476E9EF3581A9 /* DDGScreenEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGScreenEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
+		3652B3920985DEA931E3C8B0 /* DDGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGNavigationController.m; sourceTree = "<group>"; };
+		3652B65CC1173EAABEBFCE9E /* DDGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGTestViewController.m; sourceTree = "<group>"; };
 		3652B716733D9848E7E410C8 /* DDGMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGMathUtils.h; sourceTree = "<group>"; };
 		3652B883E56A2233DA76A81B /* UIColor+DDGColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDGColorAdditions.h"; sourceTree = "<group>"; };
 		3652B9C8C0F94E4C2F37E0B5 /* NSArray+DDGShufflingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDGShufflingAdditions.h"; sourceTree = "<group>"; };
 		3652BA70C853C2716681A779 /* UIColor+DDGColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDGColorAdditions.m"; sourceTree = "<group>"; };
 		3652BAABB11AF3821AB34E44 /* UIButton+DDGHitAreaInsetAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDGHitAreaInsetAdditions.m"; sourceTree = "<group>"; };
+		3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGScreenEdgePanGestureRecognizer.m; sourceTree = "<group>"; };
 		3652BC30C5E3ADB73FA20DED /* DDGMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGMathUtils.m; sourceTree = "<group>"; };
+		3652BCC2B454720506C50749 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3652BECCDE5135760D1948C8 /* DDGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGNavigationController.h; sourceTree = "<group>"; };
 		3652BF10F15B6B75E3B39157 /* NSBundle+DDGAppInformationAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DDGAppInformationAddition.m"; sourceTree = "<group>"; };
 		BB03522318ACE6E2001F0833 /* libDDGFoundationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDGFoundationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB03522518ACE6E2001F0833 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB03523218ACE6E2001F0833 /* DDGFoundationLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDGFoundationLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB03523318ACE6E2001F0833 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BB03523618ACE6E2001F0833 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BB03524A18ACE730001F0833 /* DDGFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGFoundation.h; sourceTree = "<group>"; };
 		BB03527518ACF160001F0833 /* DDGFoundationLibTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DDGFoundationLibTests-Info.plist"; sourceTree = "<group>"; };
 		BB03527618ACF160001F0833 /* DDGFoundationLibTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDGFoundationLibTests-Prefix.pch"; sourceTree = "<group>"; };
+		BB4F066718EAD2CD005B75E6 /* DDGFoundationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDGFoundationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4F066918EAD2CD005B75E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB4F066E18EAD2CD005B75E6 /* DDGFoundationExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDGFoundationExample-Info.plist"; sourceTree = "<group>"; };
+		BB4F067018EAD2CD005B75E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB4F067218EAD2CD005B75E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB4F067418EAD2CD005B75E6 /* DDGFoundationExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDGFoundationExample-Prefix.pch"; sourceTree = "<group>"; };
+		BB4F067518EAD2CD005B75E6 /* DDGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDGAppDelegate.h; sourceTree = "<group>"; };
+		BB4F067618EAD2CD005B75E6 /* DDGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDGAppDelegate.m; sourceTree = "<group>"; };
+		BB4F067818EAD2CD005B75E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */,
+				3652BCB4D5F382C2A2019EA2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +104,17 @@
 			files = (
 				BB03523A18ACE6E2001F0833 /* libDDGFoundationLib.a in Frameworks */,
 				BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */,
-				BB03523718ACE6E2001F0833 /* UIKit.framework in Frameworks */,
 				BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB4F066418EAD2CD005B75E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4F069218EAD5FF005B75E6 /* libDDGFoundationLib.a in Frameworks */,
+				BB4F066A18EAD2CD005B75E6 /* CoreGraphics.framework in Frameworks */,
+				BB4F066818EAD2CD005B75E6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,13 +156,23 @@
 			path = additions;
 			sourceTree = "<group>";
 		};
-		3652B7C9E78FC1DC8BCCE05A /* Products */ = {
+		3652B765C32DCF3DD7052183 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3652B3920985DEA931E3C8B0 /* DDGNavigationController.m */,
+				3652BECCDE5135760D1948C8 /* DDGNavigationController.h */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		3652B7C9E78FC1DC8BCCE05A /* products */ = {
 			isa = PBXGroup;
 			children = (
 				BB03522318ACE6E2001F0833 /* libDDGFoundationLib.a */,
 				BB03523218ACE6E2001F0833 /* DDGFoundationLibTests.xctest */,
+				BB4F066718EAD2CD005B75E6 /* DDGFoundationExample.app */,
 			);
-			name = Products;
+			name = products;
 			sourceTree = "<group>";
 		};
 		3652B901479622AD721E2271 /* color */ = {
@@ -135,6 +180,15 @@
 			children = (
 			);
 			path = color;
+			sourceTree = "<group>";
+		};
+		3652BBE78B346AED4803B29F /* gestures */ = {
+			isa = PBXGroup;
+			children = (
+				3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */,
+				3652B2E7F63476E9EF3581A9 /* DDGScreenEdgePanGestureRecognizer.h */,
+			);
+			path = gestures;
 			sourceTree = "<group>";
 		};
 		3652BC1D7B09DC5770C08905 /* math */ = {
@@ -149,10 +203,11 @@
 		3652BEEAC4909082466D3FC3 = {
 			isa = PBXGroup;
 			children = (
+				BB03522418ACE6E2001F0833 /* Frameworks */,
 				BB03525818ACEF3E001F0833 /* tests */,
 				BB03524918ACE730001F0833 /* src */,
-				BB03522418ACE6E2001F0833 /* Frameworks */,
-				3652B7C9E78FC1DC8BCCE05A /* Products */,
+				BB4F066C18EAD2CD005B75E6 /* example */,
+				3652B7C9E78FC1DC8BCCE05A /* products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,7 +225,8 @@
 			children = (
 				BB03522518ACE6E2001F0833 /* Foundation.framework */,
 				BB03523318ACE6E2001F0833 /* XCTest.framework */,
-				BB03523618ACE6E2001F0833 /* UIKit.framework */,
+				BB4F066918EAD2CD005B75E6 /* CoreGraphics.framework */,
+				3652BCC2B454720506C50749 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,6 +238,8 @@
 				BB03525018ACE730001F0833 /* additions */,
 				BB03525318ACE730001F0833 /* metrics */,
 				3652BC1D7B09DC5770C08905 /* math */,
+				3652B765C32DCF3DD7052183 /* controllers */,
+				3652BBE78B346AED4803B29F /* gestures */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -212,6 +270,30 @@
 				3652B58BE90AB1CDA4727BF3 /* additions */,
 			);
 			path = tests;
+			sourceTree = "<group>";
+		};
+		BB4F066C18EAD2CD005B75E6 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F067518EAD2CD005B75E6 /* DDGAppDelegate.h */,
+				BB4F067618EAD2CD005B75E6 /* DDGAppDelegate.m */,
+				BB4F067818EAD2CD005B75E6 /* Images.xcassets */,
+				BB4F066D18EAD2CD005B75E6 /* Supporting Files */,
+				3652B65CC1173EAABEBFCE9E /* DDGTestViewController.m */,
+				3652B1678D25229C9CD0BEB4 /* DDGTestViewController.h */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		BB4F066D18EAD2CD005B75E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB4F066E18EAD2CD005B75E6 /* DDGFoundationExample-Info.plist */,
+				BB4F066F18EAD2CD005B75E6 /* InfoPlist.strings */,
+				BB4F067218EAD2CD005B75E6 /* main.m */,
+				BB4F067418EAD2CD005B75E6 /* DDGFoundationExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,12 +334,34 @@
 			productReference = BB03523218ACE6E2001F0833 /* DDGFoundationLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BB4F066618EAD2CD005B75E6 /* DDGFoundationExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB4F069018EAD2CD005B75E6 /* Build configuration list for PBXNativeTarget "DDGFoundationExample" */;
+			buildPhases = (
+				BB4F066318EAD2CD005B75E6 /* Sources */,
+				BB4F066418EAD2CD005B75E6 /* Frameworks */,
+				BB4F066518EAD2CD005B75E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDGFoundationExample;
+			productName = DDGFoundationExample;
+			productReference = BB4F066718EAD2CD005B75E6 /* DDGFoundationExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3652BDED9E7207DBBD70D744 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					BB03523118ACE6E2001F0833 = {
+						TestTargetID = BB4F066618EAD2CD005B75E6;
+					};
+				};
 			};
 			buildConfigurationList = 3652B34CA6A9F24FF2F78D1F /* Build configuration list for PBXProject "DDGFoundation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -267,12 +371,13 @@
 				en,
 			);
 			mainGroup = 3652BEEAC4909082466D3FC3;
-			productRefGroup = 3652B7C9E78FC1DC8BCCE05A /* Products */;
+			productRefGroup = 3652B7C9E78FC1DC8BCCE05A /* products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BB03522218ACE6E2001F0833 /* DDGFoundationLib */,
 				BB03523118ACE6E2001F0833 /* DDGFoundationLibTests */,
+				BB4F066618EAD2CD005B75E6 /* DDGFoundationExample */,
 			);
 		};
 /* End PBXProject section */
@@ -283,6 +388,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB03527718ACF160001F0833 /* DDGFoundationLibTests-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB4F066518EAD2CD005B75E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4F067118EAD2CD005B75E6 /* InfoPlist.strings in Resources */,
+				BB4F067918EAD2CD005B75E6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +412,8 @@
 				3652B3E93B144A1C79672185 /* NSArray+DDGShufflingAdditions.m in Sources */,
 				3652B672E37423894E56C4FF /* UIButton+DDGHitAreaInsetAdditions.m in Sources */,
 				3652B5C0E0D73535E2A19301 /* NSBundle+DDGAppInformationAddition.m in Sources */,
+				3652B9D090BBBF1154ED1C3A /* DDGNavigationController.m in Sources */,
+				3652BC7A7CBAA8E287CD7A69 /* DDGScreenEdgePanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +421,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB4F066318EAD2CD005B75E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4F069518EAD8A4005B75E6 /* DDGTestViewController.m in Sources */,
+				BB4F067718EAD2CD005B75E6 /* DDGAppDelegate.m in Sources */,
+				BB4F067318EAD2CD005B75E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +443,17 @@
 			targetProxy = BB03523818ACE6E2001F0833 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB4F066F18EAD2CD005B75E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB4F067018EAD2CD005B75E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3652B059D3A80D087B52AA6D /* Debug */ = {
@@ -416,6 +553,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDGFoundationExample.app/DDGFoundationExample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -448,6 +586,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = DDGFoundationLibTests;
 				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -458,6 +597,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDGFoundationExample.app/DDGFoundationExample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -497,7 +637,104 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = DDGFoundationLibTests;
 				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BB4F068C18EAD2CD005B75E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "example/DDGFoundationExample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "example/DDGFoundationExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BB4F068D18EAD2CD005B75E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "example/DDGFoundationExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "example/DDGFoundationExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -527,6 +764,15 @@
 			buildConfigurations = (
 				BB03524518ACE6E2001F0833 /* Release */,
 				BB03524618ACE6E2001F0833 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB4F069018EAD2CD005B75E6 /* Build configuration list for PBXNativeTarget "DDGFoundationExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB4F068C18EAD2CD005B75E6 /* Release */,
+				BB4F068D18EAD2CD005B75E6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
