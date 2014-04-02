@@ -466,7 +466,7 @@ static const CGFloat FrontContentShadowOpacity = 0.3f;
 
 - (void)setFrontContentView:(UIView*)view
 {
-    [_frontContentViewContainer ddg_removeAllSubviews];
+    [_frontContentViewContainer removeAllSubviews];
 
     if (view)
     {
@@ -480,7 +480,7 @@ static const CGFloat FrontContentShadowOpacity = 0.3f;
 
 - (void)setContentView:(UIView*)view
 {
-    [_contentViewContainer ddg_removeAllSubviews];
+    [_contentViewContainer removeAllSubviews];
 
     if (view)
     {

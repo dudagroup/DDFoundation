@@ -25,7 +25,7 @@
 
 @implementation UIView (DDGConvenienceAdditions)
 
-- (void)ddg_removeAllSubviews
+- (void)removeAllSubviews
 {
     for (UIView* view in self.subviews)
     {

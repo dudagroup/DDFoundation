@@ -25,6 +25,6 @@
 
 @interface UIView (DDGConvenienceAdditions)
 
-- (void)ddg_removeAllSubviews;
+- (void)removeAllSubviews;
 
 @end
