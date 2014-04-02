@@ -30,17 +30,27 @@
 @property (nonatomic, readonly) UIViewController* backViewController;
 
 @property (nonatomic, readonly) UIViewController* visibleViewController;
+
 @property (nonatomic, copy) NSArray* viewControllers;
+
+@property (nonatomic, readonly) UIGestureRecognizer* interactivePopGestureRecognizer;
 
 @property (nonatomic, readonly) CGFloat parallaxFactor;
 @property (nonatomic, readonly) CGFloat animationDuration;
 
 - (instancetype)initWithRootViewController:(UIViewController*)viewController;
 
+//==================================================================================================
+// Pushing and Popping Stack Items
+//==================================================================================================
+
 - (void)pushViewController:(UIViewController*)viewController animated:(BOOL)animated;
+- (NSArray*)popToViewController:(UIViewController*)viewController animated:(BOOL)animated;
+
+- (UIViewController*)popViewControllerAnimated:(BOOL)animated;
+- (NSArray*)popToRootViewControllerAnimated:(BOOL)animated;
 
 @end
-
 
 @interface UIViewController (DDGNavigationControllerAddition)
 

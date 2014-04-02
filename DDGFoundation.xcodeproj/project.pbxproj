@@ -13,8 +13,9 @@
 		3652B5C0E0D73535E2A19301 /* NSBundle+DDGAppInformationAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BF10F15B6B75E3B39157 /* NSBundle+DDGAppInformationAddition.m */; };
 		3652B672E37423894E56C4FF /* UIButton+DDGHitAreaInsetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BAABB11AF3821AB34E44 /* UIButton+DDGHitAreaInsetAdditions.m */; };
 		3652B9D090BBBF1154ED1C3A /* DDGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B3920985DEA931E3C8B0 /* DDGNavigationController.m */; };
-		3652BC7A7CBAA8E287CD7A69 /* DDGScreenEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */; };
+		3652BC7A7CBAA8E287CD7A69 /* DDGEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652BBBB2C45BAD4B8C5615D /* DDGEdgePanGestureRecognizer.m */; };
 		3652BCB4D5F382C2A2019EA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652BCC2B454720506C50749 /* UIKit.framework */; };
+		3652BDEE8C783AD885BD9C39 /* UIView+DDGConvenienceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652B25E0BBAF1991C2DF05D /* UIView+DDGConvenienceAdditions.m */; };
 		BB03522618ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
 		BB03523418ACE6E2001F0833 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03523318ACE6E2001F0833 /* XCTest.framework */; };
 		BB03523518ACE6E2001F0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB03522518ACE6E2001F0833 /* Foundation.framework */; };
@@ -57,15 +58,17 @@
 		3652B02C6D7582F05A57F4E3 /* NSBundle+DDGAppInformationAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DDGAppInformationAddition.h"; sourceTree = "<group>"; };
 		3652B0626594C7B045D1909B /* UIButton+DDGHitAreaInsetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDGHitAreaInsetAdditions.h"; sourceTree = "<group>"; };
 		3652B1678D25229C9CD0BEB4 /* DDGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGTestViewController.h; sourceTree = "<group>"; };
-		3652B2E7F63476E9EF3581A9 /* DDGScreenEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGScreenEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
+		3652B25E0BBAF1991C2DF05D /* UIView+DDGConvenienceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDGConvenienceAdditions.m"; sourceTree = "<group>"; };
+		3652B2E7F63476E9EF3581A9 /* DDGEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
 		3652B3920985DEA931E3C8B0 /* DDGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGNavigationController.m; sourceTree = "<group>"; };
 		3652B65CC1173EAABEBFCE9E /* DDGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGTestViewController.m; sourceTree = "<group>"; };
 		3652B716733D9848E7E410C8 /* DDGMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGMathUtils.h; sourceTree = "<group>"; };
+		3652B7E0B81D9590D69B73D4 /* UIView+DDGConvenienceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDGConvenienceAdditions.h"; sourceTree = "<group>"; };
 		3652B883E56A2233DA76A81B /* UIColor+DDGColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDGColorAdditions.h"; sourceTree = "<group>"; };
 		3652B9C8C0F94E4C2F37E0B5 /* NSArray+DDGShufflingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDGShufflingAdditions.h"; sourceTree = "<group>"; };
 		3652BA70C853C2716681A779 /* UIColor+DDGColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDGColorAdditions.m"; sourceTree = "<group>"; };
 		3652BAABB11AF3821AB34E44 /* UIButton+DDGHitAreaInsetAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDGHitAreaInsetAdditions.m"; sourceTree = "<group>"; };
-		3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGScreenEdgePanGestureRecognizer.m; sourceTree = "<group>"; };
+		3652BBBB2C45BAD4B8C5615D /* DDGEdgePanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGEdgePanGestureRecognizer.m; sourceTree = "<group>"; };
 		3652BC30C5E3ADB73FA20DED /* DDGMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGMathUtils.m; sourceTree = "<group>"; };
 		3652BCC2B454720506C50749 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3652BECCDE5135760D1948C8 /* DDGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGNavigationController.h; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 			path = bundle;
 			sourceTree = "<group>";
 		};
+		3652B1CA68B633EA42B55C91 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3652B25E0BBAF1991C2DF05D /* UIView+DDGConvenienceAdditions.m */,
+				3652B7E0B81D9590D69B73D4 /* UIView+DDGConvenienceAdditions.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		3652B2CA7FDF56E15137F856 /* button */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +197,8 @@
 		3652BBE78B346AED4803B29F /* gestures */ = {
 			isa = PBXGroup;
 			children = (
-				3652BBBB2C45BAD4B8C5615D /* DDGScreenEdgePanGestureRecognizer.m */,
-				3652B2E7F63476E9EF3581A9 /* DDGScreenEdgePanGestureRecognizer.h */,
+				3652BBBB2C45BAD4B8C5615D /* DDGEdgePanGestureRecognizer.m */,
+				3652B2E7F63476E9EF3581A9 /* DDGEdgePanGestureRecognizer.h */,
 			);
 			path = gestures;
 			sourceTree = "<group>";
@@ -251,6 +263,7 @@
 				3652BF9EBB862BCEFAF797A5 /* array */,
 				3652B2CA7FDF56E15137F856 /* button */,
 				3652B033A3D906E68A9315FB /* bundle */,
+				3652B1CA68B633EA42B55C91 /* view */,
 			);
 			path = additions;
 			sourceTree = "<group>";
@@ -413,7 +426,8 @@
 				3652B672E37423894E56C4FF /* UIButton+DDGHitAreaInsetAdditions.m in Sources */,
 				3652B5C0E0D73535E2A19301 /* NSBundle+DDGAppInformationAddition.m in Sources */,
 				3652B9D090BBBF1154ED1C3A /* DDGNavigationController.m in Sources */,
-				3652BC7A7CBAA8E287CD7A69 /* DDGScreenEdgePanGestureRecognizer.m in Sources */,
+				3652BC7A7CBAA8E287CD7A69 /* DDGEdgePanGestureRecognizer.m in Sources */,
+				3652BDEE8C783AD885BD9C39 /* UIView+DDGConvenienceAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
