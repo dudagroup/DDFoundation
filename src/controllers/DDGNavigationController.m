@@ -94,6 +94,7 @@ static const CGFloat FrontContentShadowOpacity = 0.3f;
                     action:@selector(screenEdgePanAction:)];
 
     _edgePanGestureRecognizer.edges = UIRectEdgeLeft;
+    _edgePanGestureRecognizer.delaysTouchesBegan = YES;
 
     [self.view addGestureRecognizer:_edgePanGestureRecognizer];
 
@@ -134,11 +135,17 @@ static const CGFloat FrontContentShadowOpacity = 0.3f;
     _contentRect = self.view.bounds;
     _backContentOffsetRect = CGRectOffset(_contentRect, -(_contentRect.size.width * _parallaxFactor), 0.0f);
     _frontContentOffsetRect = CGRectOffset(_contentRect, _contentRect.size.width, 0.0f);
-
-    _edgePanGestureRecognizer.enabled = NO;
-    _edgePanGestureRecognizer.enabled = YES;
-
     _frontContentViewContainer.layer.shadowPath = CGPathCreateWithRect(self.view.bounds, nil);
+}
+
+//==================================================================================================
+// UIGestureRecognizerDelegate
+//==================================================================================================
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer*)gestureRecognizer
+    shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer*)otherGestureRecognizer
+{
+    return YES;
 }
 
 //==================================================================================================

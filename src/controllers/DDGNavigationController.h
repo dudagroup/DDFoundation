@@ -24,7 +24,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DDGNavigationController : UIViewController
+@interface DDGNavigationController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, readonly) UIViewController* topViewController;
 @property (nonatomic, readonly) UIViewController* backViewController;
