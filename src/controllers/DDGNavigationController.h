@@ -54,6 +54,6 @@
 
 @interface UIViewController (DDGNavigationControllerAddition)
 
-@property (nonatomic, readonly) DDGNavigationController* ddg_navigationController;
+@property (nonatomic, readonly) DDGNavigationController* ddgNavigationController;
 
 @end

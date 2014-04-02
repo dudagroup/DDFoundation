@@ -24,5 +24,8 @@
 #import "NSArray+DDGShufflingAdditions.h"
 #import "UIButton+DDGHitAreaInsetAdditions.h"
 #import "NSBundle+DDGAppInformationAddition.h"
+#import "UIView+DDGConvenienceAdditions.h"
+
+#import "DDGNavigationController.h"
 
 #import "DDGMathUtils.h"

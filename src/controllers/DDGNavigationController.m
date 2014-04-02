@@ -542,7 +542,7 @@ static const CGFloat FrontContentShadowOpacity = 0.3f;
 
 @implementation UIViewController (DDGNavigationControllerAddition)
 
-- (DDGNavigationController*)ddg_navigationController
+- (DDGNavigationController*)ddgNavigationController
 {
     UIViewController* parentViewController = self.parentViewController;
 
