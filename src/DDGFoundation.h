@@ -25,3 +25,4 @@
 #import "UIButton+DDGHitAreaInsetAdditions.h"
 #import "NSBundle+DDGAppInformationAddition.h"
 #import "UIView+DDGConvenienceAdditions.h"
+#import "NSString+DDGBaseConvert.h"

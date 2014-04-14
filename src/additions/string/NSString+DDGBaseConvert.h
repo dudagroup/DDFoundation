@@ -1,4 +1,4 @@
-// DDGAppDelegate.h
+// NSString+DDGBaseConvert.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,21 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DDGAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@implementation DDGAppDelegate
-{
-}
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    return YES;
-}
+@interface NSString (DDGBaseConvert)
 
-- (void)applicationWillResignActive:(UIApplication *)application {}
-- (void)applicationDidEnterBackground:(UIApplication *)application {}
-- (void)applicationWillEnterForeground:(UIApplication *)application {}
-- (void)applicationDidBecomeActive:(UIApplication *)application {}
-- (void)applicationWillTerminate:(UIApplication *)application {}
++ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value;
 
 @end

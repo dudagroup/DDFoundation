@@ -1,4 +1,4 @@
-// DDGAppDelegate.h
+// NSString+DDGBaseConvert.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,21 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DDGAppDelegate.h"
+#import "NSString+DDGBaseConvert.h"
 
-@implementation DDGAppDelegate
+
+@implementation NSString (DDGBaseConvert)
+
+static char BaseTable[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+
++ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value
 {
+    NSAssert(base >= 2 && base <= 36, @"Unsupported base %lu", (unsigned long)base);
+
+    if (value == 0) return @"0";
+
+    NSString* baseString = [NSString string];
+    NSUInteger dividend = value;
+
+    while (dividend > 0)
+    {
+        NSInteger modulo = dividend % base;
+        baseString = [NSString stringWithFormat:@"%c%@", BaseTable[modulo], baseString];
+
+        dividend = dividend / base;
+    }
+
+    return baseString;
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {}
-- (void)applicationDidEnterBackground:(UIApplication *)application {}
-- (void)applicationWillEnterForeground:(UIApplication *)application {}
-- (void)applicationDidBecomeActive:(UIApplication *)application {}
-- (void)applicationWillTerminate:(UIApplication *)application {}
 
 @end
