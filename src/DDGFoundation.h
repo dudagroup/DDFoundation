@@ -26,4 +26,8 @@
 #import "NSBundle+DDGAppInformationAddition.h"
 #import "UIView+DDGConvenienceAdditions.h"
 #import "NSString+DDGBaseConvert.h"
+
 #import "NSURL+DDGAdditions.h"
+
+#import "UIDevice+DDGAdditions.h"
+#import "UIScreen+DDGAdditions.h"
