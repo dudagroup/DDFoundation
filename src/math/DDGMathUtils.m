@@ -44,3 +44,23 @@ double DDGRandomDouble()
 
     return drand48();
 }
+
+float DDGFloatRadiansToDegrees(float radians)
+{
+    return (float)(radians * (180.0 / M_PI));
+}
+
+double DDGRadiansToDegrees(double radians)
+{
+    return radians * (180.0 / M_PI);
+}
+
+float DDGFloatDegreesToRadians(float angle)
+{
+    return (float)(angle / 180.0 * M_PI);
+}
+
+double DDGDegreesToRadians(double angle)
+{
+    return angle / 180.0 * M_PI;
+}

@@ -49,3 +49,9 @@ NSUInteger DDGRandomUnsignedIntegerWithUpperBound(NSUInteger upperBound);
  @return A random double between 0 and 1.
  */
 double DDGRandomDouble();
+
+inline float DDGFloatRadiansToDegrees(float radians);
+inline double DDGRadiansToDegrees(double radians);
+
+inline float DDGFloatDegreesToRadians(float angle);
+inline double DDGDegreesToRadians(double angle);

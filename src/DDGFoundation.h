@@ -31,3 +31,5 @@
 
 #import "UIDevice+DDGAdditions.h"
 #import "UIScreen+DDGAdditions.h"
+
+#import "UIImage+DDGAdditions.h"
