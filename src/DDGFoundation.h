@@ -25,12 +25,8 @@
 #import "UIButton+DDGAdditions.h"
 #import "NSBundle+DDGAdditions.h"
 #import "NSString+DDGAdditions.h"
-
 #import "NSURL+DDGAdditions.h"
-
-#import "UIDevice+DDGAdditions.h"
 #import "UIScreen+DDGAdditions.h"
-
 #import "UIImage+DDGAdditions.h"
 #import "UIView+DDGAdditions.h"
 

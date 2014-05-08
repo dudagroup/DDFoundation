@@ -10,4 +10,7 @@
 + (BOOL)isMainScreenWidescreen;
 - (BOOL)isWidescreen;
 
++ (BOOL)isMainScreenRetina;
+- (BOOL)isRetina;
+
 @end

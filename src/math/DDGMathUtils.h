@@ -50,8 +50,40 @@ NSUInteger DDGRandomUnsignedIntegerWithUpperBound(NSUInteger upperBound);
  */
 double DDGRandomDouble();
 
+/**
+ Returns a random float between 0 and 1.
+ Calls DDGRandomDouble internally and cast its return value to a float.
+
+ @see DDGRandomDouble
+
+ @return A random float between 0 and 1.
+ */
+float DDGRandomFloat();
+
+/**
+ Converts a float value from radians to degrees.
+
+ @return The converted value.
+ */
 inline float DDGFloatRadiansToDegrees(float radians);
+
+/**
+ Converts a double value from radians to degrees.
+
+ @return The converted value.
+ */
 inline double DDGRadiansToDegrees(double radians);
 
+/**
+ Converts a float value from degrees to radians.
+
+ @return The converted value.
+ */
 inline float DDGFloatDegreesToRadians(float angle);
+
+/**
+ Converts a double value from radians to degrees.
+
+ @return The converted value.
+ */
 inline double DDGDegreesToRadians(double angle);

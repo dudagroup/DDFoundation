@@ -14,7 +14,17 @@
 
 - (BOOL)isWidescreen
 {
-    return self.bounds.size.height == 568.0f;
+    return self.bounds.size.height == 568.0;
+}
+
++ (BOOL)isMainScreenRetina
+{
+    return [[UIScreen mainScreen] isRetina];
+}
+
+- (BOOL)isRetina
+{
+    return self.scale > 1.0;
 }
 
 @end
