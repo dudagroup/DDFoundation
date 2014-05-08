@@ -9,12 +9,12 @@
 
 - (UIImage*)imageWithNormalizedRotation
 {
-
+    return nil;
 }
 
 - (UIImage*)imageWithRotation:(DDGImageRotation)rotation
 {
-
+    return nil;
 }
 
 - (UIImage*)imageWithSize:(CGSize)size resizeMode:(DDGImageResizeMode)resizeMode
@@ -39,7 +39,7 @@
             {
                 finalSize = CGSizeMake(size.height * imageAspectRatio, size.height);
             }
-        break;
+            break;
     }
 
     UIGraphicsBeginImageContextWithOptions(finalSize, NO, 1.0f);

@@ -1,4 +1,4 @@
-// UIView+DDGConvenienceAdditions.m
+// UIColor+DDGShufflingAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,16 +20,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIView+DDGConvenienceAdditions.h"
+#import "NSArray+DDGAdditions.h"
+#import "DDGMathUtils.h"
 
 
-@implementation UIView (DDGConvenienceAdditions)
+@implementation NSArray (DDGAdditions)
 
-- (void)removeAllSubviews
+- (NSArray*)shuffledArray
 {
-    for (UIView* view in self.subviews)
+    NSMutableArray* mutableArray = [self mutableCopy];
+    [mutableArray shuffle];
+
+    return [mutableArray copy];
+}
+
+@end
+
+@implementation NSMutableArray (DDGShufflingAdditions)
+
+- (void)shuffle
+{
+    NSUInteger count = self.count;
+
+    if (count > 1)
     {
-        [view removeFromSuperview];
+        for (NSUInteger i = count - 1; i > 0; --i)
+        {
+            [self exchangeObjectAtIndex:i
+                      withObjectAtIndex:DDGRandomUnsignedIntegerWithUpperBound(i + 1)];
+        }
     }
 }
 

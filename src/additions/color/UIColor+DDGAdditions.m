@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDGColorAdditions.h"
+#import "UIColor+DDGAdditions.h"
 #import "DDGMathUtils.h"
 
 
-@implementation UIColor (DDGColorAdditions)
+@implementation UIColor (DDGAdditions)
 
 + (UIColor*)colorFromRgb:(NSUInteger)colorValue
 {

@@ -1,4 +1,4 @@
-// NSString+DDGBaseConvert.h
+// UIColor+DDGAppInformationAddition.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -23,8 +23,20 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSString (DDGBaseConvert)
+@interface NSBundle (DDGAdditions)
 
-+ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value;
+/**
+ Returns the name of the application.
+
+ @return The name of the application.
+ */
+@property (nonatomic, readonly) NSString* appName;
+
+/**
+ Returns the version of the application.
+
+ @return The version of the application.
+ */
+@property (nonatomic, readonly) NSString* appVersion;
 
 @end

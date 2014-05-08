@@ -1,4 +1,4 @@
-// UIColor+DDGAppInformationAddition.m
+// UIColor+DDGHitAreaInsetAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,19 +20,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSBundle+DDGAppInformationAddition.h"
+#import "UIButton+DDGAdditions.h"
+
+#import <objc/runtime.h>
 
 
-@implementation NSBundle (DDGAppInformationAddition)
+@implementation UIButton (DDGAdditions)
 
-- (NSString*)appName
+@dynamic hitAreaInset;
+
+static void* const HitAreaInsetKey = (void* const)&HitAreaInsetKey;
+
+- (void)setHitAreaInset:(UIEdgeInsets)hitAreaInset
 {
-    return [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    NSValue* value = [NSValue valueWithUIEdgeInsets:hitAreaInset];
+    objc_setAssociatedObject(self, HitAreaInsetKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString*)appVersion
+- (UIEdgeInsets)hitAreaInset
 {
-    return [self objectForInfoDictionaryKey:@"CFBundleVersion"];
+    NSValue* value = objc_getAssociatedObject(self, HitAreaInsetKey);
+    return value.UIEdgeInsetsValue;
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
+{
+    CGRect hitTestArea = UIEdgeInsetsInsetRect(self.bounds, self.hitAreaInset);
+    return CGRectContainsPoint(hitTestArea, point);
 }
 
 @end

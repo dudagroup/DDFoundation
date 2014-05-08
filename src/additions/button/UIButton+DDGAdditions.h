@@ -1,4 +1,4 @@
-// UIColor+DDGShufflingAdditions.h
+// UIColor+DDGHitAreaInsetAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,25 +21,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSArray (DDGShufflingAdditions)
 
-/**
- Returns a randomly shuffled version of the array.
- For more information see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+@interface UIButton (DDGAdditions)
 
- @return Randomly shuffled version of the array
- */
-- (NSArray*)shuffledArray;
-
-@end
-
-@interface NSMutableArray (DDGShufflingAdditions)
-
-/**
- Shuffles the array randomly.
- For more information see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
- */
-- (void)shuffle;
+@property (nonatomic) UIEdgeInsets hitAreaInset;
 
 @end

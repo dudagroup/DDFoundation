@@ -24,10 +24,14 @@
 
 @implementation DDGAppDelegate
 {
+    UIWindow* _window;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _window = [[UIWindow alloc] init];
+    [_window makeKeyAndVisible];
+
     return YES;
 }
 

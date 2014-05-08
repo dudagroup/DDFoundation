@@ -1,4 +1,4 @@
-// UIColor+DDGShufflingAdditions.m
+// NSString+DDGBaseConvert.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,36 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSArray+DDGShufflingAdditions.h"
-#import "DDGMathUtils.h"
+#import "NSString+DDGAdditions.h"
 
 
-@implementation NSArray (DDGShufflingAdditions)
+@implementation NSString (DDGAdditions)
 
-- (NSArray*)shuffledArray
+static char BaseTable[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+
++ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value
 {
-    NSMutableArray* mutableArray = [self mutableCopy];
-    [mutableArray shuffle];
+    NSAssert(base >= 2 && base <= 36, @"Unsupported base %lu", (unsigned long)base);
 
-    return [mutableArray copy];
-}
+    if (value == 0) return @"0";
 
-@end
+    NSString* baseString = [NSString string];
+    NSUInteger dividend = value;
 
-@implementation NSMutableArray (DDGShufflingAdditions)
-
-- (void)shuffle
-{
-    NSUInteger count = self.count;
-
-    if (count > 1)
+    while (dividend > 0)
     {
-        for (NSUInteger i = count - 1; i > 0; --i)
-        {
-            [self exchangeObjectAtIndex:i
-                      withObjectAtIndex:DDGRandomUnsignedIntegerWithUpperBound(i + 1)];
-        }
+        NSInteger modulo = dividend % base;
+        baseString = [NSString stringWithFormat:@"%c%@", BaseTable[modulo], baseString];
+
+        dividend = dividend / base;
     }
+
+    return baseString;
 }
+
 
 @end

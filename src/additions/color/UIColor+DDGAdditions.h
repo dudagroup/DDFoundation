@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIColor (DDGColorAdditions)
+@interface UIColor (DDGAdditions)
 
 ///=================================================================================================
 /// @name Creating Colors

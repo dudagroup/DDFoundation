@@ -20,12 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDGColorAdditions.h"
-#import "NSArray+DDGShufflingAdditions.h"
-#import "UIButton+DDGHitAreaInsetAdditions.h"
-#import "NSBundle+DDGAppInformationAddition.h"
-#import "UIView+DDGConvenienceAdditions.h"
-#import "NSString+DDGBaseConvert.h"
+#import "UIColor+DDGAdditions.h"
+#import "NSArray+DDGAdditions.h"
+#import "UIButton+DDGAdditions.h"
+#import "NSBundle+DDGAdditions.h"
+#import "NSString+DDGAdditions.h"
 
 #import "NSURL+DDGAdditions.h"
 
@@ -33,3 +32,6 @@
 #import "UIScreen+DDGAdditions.h"
 
 #import "UIImage+DDGAdditions.h"
+#import "UIView+DDGAdditions.h"
+
+#import "DDGMathUtils.h"

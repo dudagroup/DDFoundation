@@ -1,4 +1,4 @@
-// NSString+DDGBaseConvert.m
+// NSString+DDGBaseConvert.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,32 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSString+DDGBaseConvert.h"
+#import <Foundation/Foundation.h>
 
 
-@implementation NSString (DDGBaseConvert)
+@interface NSString (DDGAdditions)
 
-static char BaseTable[] = "0123456789abcdefghijklmnopqrstuvwxyz";
-
-+ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value
-{
-    NSAssert(base >= 2 && base <= 36, @"Unsupported base %lu", (unsigned long)base);
-
-    if (value == 0) return @"0";
-
-    NSString* baseString = [NSString string];
-    NSUInteger dividend = value;
-
-    while (dividend > 0)
-    {
-        NSInteger modulo = dividend % base;
-        baseString = [NSString stringWithFormat:@"%c%@", BaseTable[modulo], baseString];
-
-        dividend = dividend / base;
-    }
-
-    return baseString;
-}
-
++ (NSString*)stringWithBase:(NSUInteger)base fromInteger:(NSUInteger)value;
 
 @end

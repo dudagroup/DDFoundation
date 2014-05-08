@@ -1,4 +1,4 @@
-// UIColor+DDGHitAreaInsetAdditions.h
+// UIView+DDGConvenienceAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -23,9 +23,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@interface UIView (DDGAdditions)
 
-@interface UIButton (DDGHitAreaInsetAdditions)
-
-@property (nonatomic) UIEdgeInsets hitAreaInset;
+- (void)removeAllSubviews;
 
 @end

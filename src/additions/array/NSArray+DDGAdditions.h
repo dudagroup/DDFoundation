@@ -1,4 +1,4 @@
-// UIView+DDGConvenienceAdditions.h
+// UIColor+DDGShufflingAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,10 +21,25 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
-@interface UIView (DDGConvenienceAdditions)
+@interface NSArray (DDGAdditions)
 
-- (void)removeAllSubviews;
+/**
+ Returns a randomly shuffled version of the array.
+ For more information see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+
+ @return Randomly shuffled version of the array
+ */
+- (NSArray*)shuffledArray;
+
+@end
+
+@interface NSMutableArray (DDGShufflingAdditions)
+
+/**
+ Shuffles the array randomly.
+ For more information see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+ */
+- (void)shuffle;
 
 @end

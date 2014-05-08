@@ -1,4 +1,4 @@
-// UIColor+DDGAppInformationAddition.m
+// UIView+DDGConvenienceAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,23 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "UIView+DDGAdditions.h"
 
 
-@interface NSBundle (DDGAppInformationAddition)
+@implementation UIView (DDGAdditions)
 
-/**
- Returns the name of the application.
-
- @return The name of the application.
- */
-@property (nonatomic, readonly) NSString* appName;
-
-/**
- Returns the version of the application.
-
- @return The version of the application.
- */
-@property (nonatomic, readonly) NSString* appVersion;
+- (void)removeAllSubviews
+{
+    for (UIView* view in self.subviews)
+    {
+        [view removeFromSuperview];
+    }
+}
 
 @end
