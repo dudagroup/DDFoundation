@@ -21,7 +21,7 @@
         NSString* key = [keyValueArray[0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSString* value = [keyValueArray[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-        id results = [queryComponents objectForKey:key];
+        id results = queryComponents[key];
 
         if (results)
         {
@@ -31,13 +31,13 @@
             }
             else
             {
-                NSMutableArray* values = [NSMutableArray arrayWithObjects:results, value, nil];
-                [queryComponents setObject:values forKey:key];
+                NSMutableArray* values = [@[results, value] mutableCopy];
+                queryComponents[key] = values;
             }
         }
         else
         {
-            [queryComponents setObject:value forKey:key];
+            queryComponents[key] = value;
         }
 
         [results addObject:value];

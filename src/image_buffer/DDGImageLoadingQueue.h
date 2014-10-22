@@ -20,13 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDGAdditions.h"
-#import "NSArray+DDGAdditions.h"
-#import "UIButton+DDGAdditions.h"
-#import "NSBundle+DDGAdditions.h"
-#import "NSString+DDGAdditions.h"
-#import "NSURL+DDGAdditions.h"
-#import "UIScreen+DDGAdditions.h"
-#import "UIImage+DDGAdditions.h"
-#import "UIView+DDGAdditions.h"
-#import "DDGMathUtils.h"
+#import <Foundation/Foundation.h>
+
+@class DDGImageLoadingQueueItem;
+
+
+extern float DDGImageBufferDefaultLow;
+extern float DDGImageBufferDefaultHigh;
+
+@interface DDGImageLoadingQueue : NSObject
+
+- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url;
+- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url successBlock:successBlock;
+
+@end

@@ -20,13 +20,57 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDGAdditions.h"
-#import "NSArray+DDGAdditions.h"
-#import "UIButton+DDGAdditions.h"
-#import "NSBundle+DDGAdditions.h"
-#import "NSString+DDGAdditions.h"
-#import "NSURL+DDGAdditions.h"
-#import "UIScreen+DDGAdditions.h"
-#import "UIImage+DDGAdditions.h"
-#import "UIView+DDGAdditions.h"
-#import "DDGMathUtils.h"
+#import <AFNetworking/AFHTTPRequestOperation.h>
+#import "DDGImageLoadingQueue.h"
+#import "DDGImageLoadingQueueItem.h"
+
+
+float DDGImageBufferDefaultLow = 0.0f;
+float DDGImageBufferDefaultHigh = 0.0f;
+
+@implementation DDGImageLoadingQueue
+{
+    NSOperationQueue* _queue;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+
+    if (self)
+    {
+        _queue = [[NSOperationQueue alloc] init];
+
+    }
+
+    return self;
+}
+
+- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url
+{
+    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
+
+    AFHTTPRequestOperation* requestOperation =
+        [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+
+
+    requestOperation.responseSerializer = [[AFImageResponseSerializer alloc] init];
+    requestOperation.completionBlock = ^
+    {
+        NSLog(@"Done!");
+    };
+
+    [requestOperation setDownloadProgressBlock:^(
+        NSUInteger bytesRead,
+        long long int totalBytesRead,
+        long long int totalBytesExpectedToRead)
+    {
+        NSLog(@"%qi %qi", totalBytesRead, totalBytesExpectedToRead);
+    }];
+
+    [_queue addOperation:requestOperation];
+
+    return nil;
+}
+
+@end

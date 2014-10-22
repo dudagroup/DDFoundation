@@ -5,20 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>28AF85AF-DB56-479D-A494-DE1E308C9EF6</string>
-	<key>IDESourceControlProjectName</key>
-	<string>DDGFoundation</string>
+	<string>0CA31B8E-84F4-4EBA-A581-0AEEDD8A6D72</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>68F958F394417E1062E23D6075861815B1496B0D</key>
 		<string>https://github.com/dudagroup/DDGFoundation.git</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>DDGFoundation.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>68F958F394417E1062E23D6075861815B1496B0D</key>
-		<string>../..</string>
+		<string>ddgfoundation</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dudagroup/DDGFoundation.git</string>

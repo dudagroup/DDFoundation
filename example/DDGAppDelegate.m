@@ -21,6 +21,11 @@
 // THE SOFTWARE.
 
 #import "DDGAppDelegate.h"
+#import "UIScreen+DDGAdditions.h"
+
+#import <DDGFoundation/DDGImageLoadingQueue.h>
+#import <AFNetworking/AFNetworking.h>
+
 
 @implementation DDGAppDelegate
 {
@@ -31,6 +36,17 @@
 {
     _window = [[UIWindow alloc] init];
     [_window makeKeyAndVisible];
+
+    NSLog(@"%i", [UIScreen isMainScreenWidescreen]);
+
+    DDGImageLoadingQueue* imageLoadingQueue = [[DDGImageLoadingQueue alloc] init];
+
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
 
     return YES;
 }

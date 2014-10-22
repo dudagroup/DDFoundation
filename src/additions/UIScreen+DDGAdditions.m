@@ -7,6 +7,8 @@
 
 @implementation UIScreen (DDGAdditions)
 
+static const CGFloat WidescreenRatio = 1.7;
+
 + (BOOL)isMainScreenWidescreen
 {
     return [[UIScreen mainScreen] isWidescreen];
@@ -14,7 +16,7 @@
 
 - (BOOL)isWidescreen
 {
-    return self.bounds.size.height == 568.0;
+    return (self.bounds.size.height / self.bounds.size.width) >= WidescreenRatio;
 }
 
 + (BOOL)isMainScreenRetina
