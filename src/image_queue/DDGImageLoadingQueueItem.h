@@ -26,6 +26,10 @@
 @class DDGImageLoadingQueue;
 
 
+typedef void (^DDGImageLoadingQueueItemSuccess)(UIImage* image);
+typedef void (^DDGImageLoadingQueueItemFailure)(NSError* error);
+typedef void (^DDGImageLoadingQueueItemProgress)(long long int bytesRead, long long int totalBytes);
+
 @interface DDGImageLoadingQueueItem : NSObject
 
 @property (nonatomic, readonly) NSURL* url;
@@ -33,9 +37,9 @@
 
 @property (nonatomic, weak, readonly) DDGImageLoadingQueue* queue;
 
-@property (nonatomic) NSObject* successBlock;
-@property (nonatomic) NSObject* failureBlock;
-@property (nonatomic) NSObject* progressBlock;
+@property (nonatomic, copy) DDGImageLoadingQueueItemSuccess successBlock;
+@property (nonatomic, copy) DDGImageLoadingQueueItemFailure failureBlock;
+@property (nonatomic, copy) DDGImageLoadingQueueItemProgress progressBlock;
 
 - (instancetype)initWithQueue:(DDGImageLoadingQueue*)queue url:(NSURL*)url;
 

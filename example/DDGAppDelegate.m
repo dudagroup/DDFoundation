@@ -42,15 +42,32 @@
     
     DDGImageLoadingQueue* imageLoadingQueue = [[DDGImageLoadingQueue alloc] init];
 
-    
+
     [imageLoadingQueue queueImageByUrl:
-        [NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://lorempixel.com/200/200/cats/"]];
+
     DDGImageLoadingQueueItem* queueItem =
         [imageLoadingQueue queueImageByUrl:
-         [NSURL URLWithString:@"http://s3.amazonaws.com/TimeScapes/images/stills/4k/moonbow.jpg"]];
-    
+            [NSURL URLWithString:@"http://lorempixel.com/300/300/cats/"]];
 
-    queueItem.requestOperation.threadPriority = NSOperationQueuePriorityVeryHigh;
+
+
+    queueItem.requestOperation.queuePriority = NSOperationQueuePriorityVeryHigh;
     
     return YES;
 }

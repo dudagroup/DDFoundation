@@ -31,6 +31,7 @@
     NSMutableArray* _queueItems;
 }
 
+@dynamic queueItems;
 @dynamic maxConcurrentRequests;
 
 - (instancetype)init
@@ -70,6 +71,11 @@
 - (NSInteger)maxConcurrentRequests
 {
     return _queue.maxConcurrentOperationCount;
+}
+
+- (NSArray*)queueItems
+{
+    return [_queueItems copy];
 }
 
 @end

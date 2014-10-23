@@ -54,18 +54,37 @@
         _requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
         _requestOperation.responseSerializer = [[AFImageResponseSerializer alloc] init];
 
-        _requestOperation.completionBlock = ^
-        {
-            NSLog(@"Done! %@ %@", _requestOperation.responseObject, _requestOperation.request.URL);
-        };
+        __weak DDGImageLoadingQueueItem* weakSelf = self;
 
-        [_requestOperation setDownloadProgressBlock:^(
+        [_requestOperation setCompletionBlockWithSuccess:^(
+            AFHTTPRequestOperation* operation,
+            id responseObject)
+        {
+            if (weakSelf.successBlock)
+            {
+                weakSelf.successBlock(responseObject);
+            }
+        }
+                                                 failure:^(
+            AFHTTPRequestOperation* operation,
+            NSError* error)
+        {
+            if (weakSelf.failureBlock)
+            {
+                weakSelf.failureBlock(error);
+            }
+        }];
+
+        _requestOperation.downloadProgressBlock = ^(
             NSUInteger bytesRead,
             long long int totalBytesRead,
             long long int totalBytesExpectedToRead)
         {
-            //NSLog(@"%qi %qi", totalBytesRead, totalBytesExpectedToRead);
-        }];
+            if (weakSelf.progressBlock && totalBytesExpectedToRead != -1)
+            {
+                weakSelf.progressBlock(totalBytesRead, totalBytesExpectedToRead);
+            }
+        };
 
     }
 

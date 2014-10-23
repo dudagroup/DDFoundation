@@ -30,13 +30,9 @@ extern float DDGImageBufferDefaultHigh;
 
 @interface DDGImageLoadingQueue : NSObject
 
+@property (nonatomic, readonly) NSArray* queueItems;
 @property (nonatomic) NSInteger maxConcurrentRequests;
 
 - (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url;
-
-- (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url
-                                successBlock:(id)successBlock
-                                failureBlock:(id)failureBlock
-                               progressBlock:(id)progressBlock;
 
 @end
