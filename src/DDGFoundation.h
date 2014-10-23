@@ -20,13 +20,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIColor+DDGAdditions.h"
-#import "NSArray+DDGAdditions.h"
-#import "UIButton+DDGAdditions.h"
-#import "NSBundle+DDGAdditions.h"
-#import "NSString+DDGAdditions.h"
-#import "NSURL+DDGAdditions.h"
-#import "UIScreen+DDGAdditions.h"
-#import "UIImage+DDGAdditions.h"
-#import "UIView+DDGAdditions.h"
-#import "DDGMathUtils.h"
+//==================================================================================================
+// Additions
+//==================================================================================================
+
+#if !COCOAPODS || __has_include("DDGFoundationAdditions.h")
+
+#import "DDGFoundationAdditions.h"
+
+#endif
+
+//==================================================================================================
+// Potentially Dangerous Additions
+//==================================================================================================
+
+#if !COCOAPODS || __has_include("DDGFoundationPotentiallyDangerousAdditions.h")
+
+#import "DDGFoundationPotentiallyDangerousAdditions.h"
+
+#endif
+
+//==================================================================================================
+// Utility
+//==================================================================================================
+
+#if !COCOAPODS || __has_include("DDGFoundationUtility.h")
+
+#import "DDGFoundationUtility.h"
+
+#endif
+
+//==================================================================================================
+// Image Queue
+//==================================================================================================
+
+#if !COCOAPODS || __has_include("DDGFoundationImageQueue.h")
+
+#import "DDGFoundationImageQueue.h"
+
+#endif

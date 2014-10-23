@@ -1,4 +1,4 @@
-// DDGFoundation.h
+// UIButton+DDGAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,17 +20,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "UIButton+DDGAdditions.h"
 
-@class DDGImageLoadingQueueItem;
+#import <objc/runtime.h>
 
 
-extern float DDGImageBufferDefaultLow;
-extern float DDGImageBufferDefaultHigh;
+@implementation UIButton (DDGAdditions)
 
-@interface DDGImageLoadingQueue : NSObject
+@dynamic hitAreaInset;
 
-- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url;
-- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url successBlock:successBlock;
+static void* const HitAreaInsetKey = (void* const)&HitAreaInsetKey;
+
+- (void)setHitAreaInset:(UIEdgeInsets)hitAreaInset
+{
+    NSValue* value = [NSValue valueWithUIEdgeInsets:hitAreaInset];
+    objc_setAssociatedObject(self, HitAreaInsetKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIEdgeInsets)hitAreaInset
+{
+    NSValue* value = objc_getAssociatedObject(self, HitAreaInsetKey);
+    return value.UIEdgeInsetsValue;
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
+{
+    CGRect hitTestArea = UIEdgeInsetsInsetRect(self.bounds, self.hitAreaInset);
+    return CGRectContainsPoint(hitTestArea, point);
+}
 
 @end

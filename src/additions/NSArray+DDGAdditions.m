@@ -1,4 +1,4 @@
-// UIColor+DDGShufflingAdditions.m
+// NSArray+DDGAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //

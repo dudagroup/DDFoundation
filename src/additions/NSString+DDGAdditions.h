@@ -1,4 +1,4 @@
-// NSString+DDGBaseConvert.h
+// NSString+DDGAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //

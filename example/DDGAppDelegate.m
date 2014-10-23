@@ -23,7 +23,7 @@
 #import "DDGAppDelegate.h"
 #import "UIScreen+DDGAdditions.h"
 
-#import <DDGFoundation/DDGImageLoadingQueue.h>
+#import <DDGFoundation/DDGFoundation.h>
 #import <AFNetworking/AFNetworking.h>
 
 
@@ -39,15 +39,19 @@
 
     NSLog(@"%i", [UIScreen isMainScreenWidescreen]);
 
+    
     DDGImageLoadingQueue* imageLoadingQueue = [[DDGImageLoadingQueue alloc] init];
 
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
-    [imageLoadingQueue addImageByUrl:[NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    
+    [imageLoadingQueue queueImageByUrl:
+        [NSURL URLWithString:@"http://www.freeartwallpapers.com/wp-content/uploads/2014/10/hd-wallpaper-6032-6366-hd-wallpapers1.jpg"]];
+    DDGImageLoadingQueueItem* queueItem =
+        [imageLoadingQueue queueImageByUrl:
+         [NSURL URLWithString:@"http://s3.amazonaws.com/TimeScapes/images/stills/4k/moonbow.jpg"]];
+    
 
+    queueItem.requestOperation.threadPriority = NSOperationQueuePriorityVeryHigh;
+    
     return YES;
 }
 

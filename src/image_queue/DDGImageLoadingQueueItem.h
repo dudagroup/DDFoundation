@@ -1,4 +1,4 @@
-// DDGFoundation.h
+// DDGImageLoadingQueueItem.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,57 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <AFNetworking/AFHTTPRequestOperation.h>
-#import "DDGImageLoadingQueue.h"
-#import "DDGImageLoadingQueueItem.h"
+#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+
+@class DDGImageLoadingQueue;
 
 
-float DDGImageBufferDefaultLow = 0.0f;
-float DDGImageBufferDefaultHigh = 0.0f;
+@interface DDGImageLoadingQueueItem : NSObject
 
-@implementation DDGImageLoadingQueue
-{
-    NSOperationQueue* _queue;
-}
+@property (nonatomic, readonly) NSURL* url;
+@property (nonatomic, readonly) AFHTTPRequestOperation* requestOperation;
 
-- (instancetype)init
-{
-    self = [super init];
+@property (nonatomic, weak, readonly) DDGImageLoadingQueue* queue;
 
-    if (self)
-    {
-        _queue = [[NSOperationQueue alloc] init];
+@property (nonatomic) NSObject* successBlock;
+@property (nonatomic) NSObject* failureBlock;
+@property (nonatomic) NSObject* progressBlock;
 
-    }
+- (instancetype)initWithQueue:(DDGImageLoadingQueue*)queue url:(NSURL*)url;
 
-    return self;
-}
+- (void)pause;
+- (void)resume;
 
-- (DDGImageLoadingQueueItem*)addImageByUrl:(NSURL*)url
-{
-    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
-
-    AFHTTPRequestOperation* requestOperation =
-        [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
-
-
-    requestOperation.responseSerializer = [[AFImageResponseSerializer alloc] init];
-    requestOperation.completionBlock = ^
-    {
-        NSLog(@"Done!");
-    };
-
-    [requestOperation setDownloadProgressBlock:^(
-        NSUInteger bytesRead,
-        long long int totalBytesRead,
-        long long int totalBytesExpectedToRead)
-    {
-        NSLog(@"%qi %qi", totalBytesRead, totalBytesExpectedToRead);
-    }];
-
-    [_queue addOperation:requestOperation];
-
-    return nil;
-}
+- (void)cancel;
 
 @end

@@ -1,4 +1,4 @@
-// UIColor+DDGHexColorAdditions.m
+// UIColor+DDGAdditions.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //

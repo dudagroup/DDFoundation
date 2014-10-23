@@ -1,4 +1,4 @@
-// UIImage+DDGAdditions.h
+// DDGImageLoadingQueue.m
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,36 +20,56 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
+#import "DDGImageLoadingQueue.h"
+#import "DDGImageLoadingQueueItem.h"
 
-typedef NS_ENUM(NSUInteger, DDGImageResizeMode)
+
+@implementation DDGImageLoadingQueue
 {
-    DDGImageResizeModeAspectFit
-};
+    NSOperationQueue* _queue;
+    NSMutableArray* _queueItems;
+}
 
-typedef NS_ENUM(NSUInteger, DDGImageRotation)
+@dynamic maxConcurrentRequests;
+
+- (instancetype)init
 {
-    DDGImageRotation90Degrees = 0,
-    DDGImageRotation180Degrees,
-    DDGImageRotation270Degrees,
-};
+    self = [super init];
 
-typedef void (^DDGImageResizeCompletionHandler)(UIImage* resizedImage);
+    if (self)
+    {
+        _queue = [[NSOperationQueue alloc] init];
+        _queueItems = [NSMutableArray array];
+    }
 
-@interface UIImage (DDGAdditions)
+    return self;
+}
 
-- (UIImage*)imageWithNormalizedRotation;
-- (UIImage*)imageWithRotation:(DDGImageRotation)rotation;
-- (UIImage*)imageWithSize:(CGSize)size resizeMode:(DDGImageResizeMode)resizeMode;
+- (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url
+{
+    DDGImageLoadingQueueItem* queueItem =
+        [[DDGImageLoadingQueueItem alloc] initWithQueue:self url:url];
 
-/*- (void)imageWithNormalizedRotation:(DDGImageResizeCompletionHandler)completionHandler;
+    [_queueItems addObject:queueItem];
+    [_queue addOperation:queueItem.requestOperation];
 
-- (void)imageWithRotation:(DDGImageRotation)rotation
-               completion:(DDGImageResizeCompletionHandler)completionHandler;
+    return queueItem;
+}
 
-- (void)imageWithSize:(CGSize)size
-           resizeMode:(DDGImageResizeMode)resizeMode
-           completion:(DDGImageResizeCompletionHandler)completionHandler;*/
+- (void)queueItemCompleted:(DDGImageLoadingQueueItem*)queueItem
+{
+    [_queueItems removeObject:queueItem];
+}
+
+- (void)setMaxConcurrentRequests:(NSInteger)maxConcurrentRequests
+{
+    _queue.maxConcurrentOperationCount = maxConcurrentRequests;
+}
+
+- (NSInteger)maxConcurrentRequests
+{
+    return _queue.maxConcurrentOperationCount;
+}
 
 @end

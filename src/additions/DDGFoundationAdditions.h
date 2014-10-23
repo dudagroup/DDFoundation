@@ -1,4 +1,4 @@
-// UIColor+DDGHitAreaInsetAdditions.m
+// DDGFoundationAdditions.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -20,33 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIButton+DDGAdditions.h"
-
-#import <objc/runtime.h>
-
-
-@implementation UIButton (DDGAdditions)
-
-@dynamic hitAreaInset;
-
-static void* const HitAreaInsetKey = (void* const)&HitAreaInsetKey;
-
-- (void)setHitAreaInset:(UIEdgeInsets)hitAreaInset
-{
-    NSValue* value = [NSValue valueWithUIEdgeInsets:hitAreaInset];
-    objc_setAssociatedObject(self, HitAreaInsetKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIEdgeInsets)hitAreaInset
-{
-    NSValue* value = objc_getAssociatedObject(self, HitAreaInsetKey);
-    return value.UIEdgeInsetsValue;
-}
-
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
-{
-    CGRect hitTestArea = UIEdgeInsetsInsetRect(self.bounds, self.hitAreaInset);
-    return CGRectContainsPoint(hitTestArea, point);
-}
-
-@end
+#import "UIColor+DDGAdditions.h"
+#import "NSArray+DDGAdditions.h"
+#import "NSBundle+DDGAdditions.h"
+#import "NSString+DDGAdditions.h"
+#import "NSURL+DDGAdditions.h"
+#import "UIScreen+DDGAdditions.h"
+#import "UIImage+DDGAdditions.h"
+#import "UIView+DDGAdditions.h"

@@ -21,7 +21,15 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DDGFoundation (1.0):
+    - DDGFoundation/Additions
+    - DDGFoundation/ImageQueue
+    - DDGFoundation/PotentiallyDangerousAdditions
+    - DDGFoundation/Utility
+  - DDGFoundation/Additions (1.0)
+  - DDGFoundation/ImageQueue (1.0):
     - AFNetworking (~> 2.4)
+  - DDGFoundation/PotentiallyDangerousAdditions (1.0)
+  - DDGFoundation/Utility (1.0)
 
 DEPENDENCIES:
   - DDGFoundation (from `./`)
@@ -32,6 +40,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  DDGFoundation: 0be823b5e71c229a6ff6ef3448451b4c300c0a8c
+  DDGFoundation: bfeae8cdb7f48d961cfc6af934239b2866d09cb5
 
 COCOAPODS: 0.34.4

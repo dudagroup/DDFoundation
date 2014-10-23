@@ -1,4 +1,4 @@
-// UIColor+DDGHitAreaInsetAdditions.h
+// DDGImageLoadingQueue.h
 //
 // Copyright (c) 2014 DU DA GMBH (http://www.dudagroup.com)
 //
@@ -21,11 +21,22 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
+@class DDGImageLoadingQueueItem;
 
 
-@interface UIButton (DDGAdditions)
+extern float DDGImageBufferDefaultLow;
+extern float DDGImageBufferDefaultHigh;
 
-@property (nonatomic) UIEdgeInsets hitAreaInset;
+@interface DDGImageLoadingQueue : NSObject
+
+@property (nonatomic) NSInteger maxConcurrentRequests;
+
+- (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url;
+
+- (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url
+                                successBlock:(id)successBlock
+                                failureBlock:(id)failureBlock
+                               progressBlock:(id)progressBlock;
 
 @end

@@ -14,7 +14,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>68F958F394417E1062E23D6075861815B1496B0D</key>
-		<string>ddgfoundation</string>
+		<string>ddgfoundation/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dudagroup/DDGFoundation.git</string>
