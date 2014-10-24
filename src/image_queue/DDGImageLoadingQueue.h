@@ -34,5 +34,6 @@ extern float DDGImageBufferDefaultHigh;
 @property (nonatomic) NSInteger maxConcurrentRequests;
 
 - (DDGImageLoadingQueueItem*)queueImageByUrl:(NSURL*)url;
+- (void)queueItemCompleted:(DDGImageLoadingQueueItem*)queueItem;
 
 @end

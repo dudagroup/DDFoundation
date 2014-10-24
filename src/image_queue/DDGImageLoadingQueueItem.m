@@ -28,6 +28,7 @@
 
 @implementation DDGImageLoadingQueueItem
 {
+    BOOL _didComplete;
     AFHTTPRequestOperation* _requestOperation;
 }
 
@@ -55,23 +56,28 @@
         _requestOperation.responseSerializer = [[AFImageResponseSerializer alloc] init];
 
         __weak DDGImageLoadingQueueItem* weakSelf = self;
+        __strong DDGImageLoadingQueueItem* strongSelf = weakSelf;
 
         [_requestOperation setCompletionBlockWithSuccess:^(
             AFHTTPRequestOperation* operation,
             id responseObject)
         {
-            if (weakSelf.successBlock)
+            [strongSelf.queue queueItemCompleted:strongSelf];
+
+            if (strongSelf.successBlock)
             {
-                weakSelf.successBlock(responseObject);
+                strongSelf.successBlock(responseObject);
             }
         }
                                                  failure:^(
             AFHTTPRequestOperation* operation,
             NSError* error)
         {
-            if (weakSelf.failureBlock)
+            [strongSelf.queue queueItemCompleted:strongSelf];
+
+            if (strongSelf.failureBlock)
             {
-                weakSelf.failureBlock(error);
+                strongSelf.failureBlock(error);
             }
         }];
 
@@ -104,6 +110,11 @@
 - (void)pause
 {
     [_requestOperation pause];
+}
+
+- (UIImage*)image
+{
+    return _requestOperation.responseObject;
 }
 
 @end
