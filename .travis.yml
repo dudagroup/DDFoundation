@@ -3,3 +3,5 @@ xcode_workspace: DDGFoundation.xcworkspace
 xcode_scheme: DDGFoundationTests
 before_install:
     - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+script:
+    - xctool -workspace DDGFoundation.xcworkspace -scheme DDGFoundationTests -sdk iphonesimulator test
