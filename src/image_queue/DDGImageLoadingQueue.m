@@ -53,7 +53,8 @@
         [[DDGImageLoadingQueueItem alloc] initWithQueue:self url:url];
 
     [_queueItems addObject:queueItem];
-    [_queue addOperation:queueItem.requestOperation];
+
+    [queueItem start];
 
     return queueItem;
 }

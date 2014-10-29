@@ -41,9 +41,11 @@ typedef void (^DDGImageLoadingQueueItemProgress)(long long int bytesRead, long l
 @property (nonatomic, copy) DDGImageLoadingQueueItemFailure failureBlock;
 @property (nonatomic, copy) DDGImageLoadingQueueItemProgress progressBlock;
 
-@property (nonatomic) UIImage* image;
+@property (nonatomic, readonly) UIImage* image;
 
 - (instancetype)initWithQueue:(DDGImageLoadingQueue*)queue url:(NSURL*)url;
+
+- (void)start;
 
 - (void)pause;
 - (void)resume;

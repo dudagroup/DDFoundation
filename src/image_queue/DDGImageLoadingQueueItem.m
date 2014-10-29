@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <AFNetworking/AFHTTPRequestOperation.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 #import "DDGImageLoadingQueueItem.h"
 #import "DDGImageLoadingQueue.h"
@@ -29,7 +30,9 @@
 @implementation DDGImageLoadingQueueItem
 {
     BOOL _didComplete;
+
     AFHTTPRequestOperation* _requestOperation;
+    UIImage* _image;
 }
 
 - (instancetype)init
@@ -49,9 +52,25 @@
     {
         _queue = queue;
         _url = url;
+    }
 
-        NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
+    return self;
+}
 
+- (void)start
+{
+    NSURLRequest* urlRequest = [NSURLRequest requestWithURL:_url];
+    UIImage* cachedImage = [[UIImageView sharedImageCache] cachedImageForRequest:urlRequest];
+
+    if (cachedImage)
+    {
+        _image = cachedImage;
+
+        [_queue queueItemCompleted:self];
+        if (_successBlock) _successBlock(cachedImage);
+    }
+    else
+    {
         _requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
         _requestOperation.responseSerializer = [[AFImageResponseSerializer alloc] init];
 
@@ -62,6 +81,9 @@
             AFHTTPRequestOperation* operation,
             id responseObject)
         {
+            strongSelf->_image = responseObject;
+
+            [[UIImageView sharedImageCache] cacheImage:responseObject forRequest:urlRequest];
             [strongSelf.queue queueItemCompleted:strongSelf];
 
             if (strongSelf.successBlock)
@@ -92,9 +114,8 @@
             }
         };
 
+        [_queue.queue addOperation:_requestOperation];
     }
-
-    return self;
 }
 
 - (void)cancel
@@ -110,11 +131,6 @@
 - (void)pause
 {
     [_requestOperation pause];
-}
-
-- (UIImage*)image
-{
-    return _requestOperation.responseObject;
 }
 
 @end
