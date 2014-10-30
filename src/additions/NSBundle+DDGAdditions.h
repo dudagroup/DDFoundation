@@ -30,20 +30,20 @@
 
  @return The name of the application.
  */
-@property (nonatomic, readonly) NSString* appName;
+@property (nonatomic, readonly) NSString* displayName;
 
 /**
  Returns the version of the application.
  
  @return The version of the application.
  */
-@property (nonatomic, readonly) NSString* appVersion;
+@property (nonatomic, readonly) NSString* version;
 
 /**
  Returns the build version of the application.
  
  @return The build version of the application.
  */
-@property (nonatomic, readonly) NSString* buildVersion;
+@property (nonatomic, readonly) NSString* build;
 
 @end

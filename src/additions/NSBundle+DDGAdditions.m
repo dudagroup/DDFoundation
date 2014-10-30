@@ -25,17 +25,17 @@
 
 @implementation NSBundle (DDGAdditions)
 
-- (NSString*)appName
+- (NSString*)displayName
 {
     return [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
-- (NSString*)appVersion
+- (NSString*)version
 {
     return [self objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
-- (NSString*)buildVersion
+- (NSString*)build
 {
     return [self objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
