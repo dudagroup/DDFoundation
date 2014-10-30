@@ -32,6 +32,11 @@
 
 - (NSString*)appVersion
 {
+    return [self objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
+
+- (NSString*)buildVersion
+{
     return [self objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 

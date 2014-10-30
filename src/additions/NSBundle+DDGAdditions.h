@@ -34,9 +34,16 @@
 
 /**
  Returns the version of the application.
-
+ 
  @return The version of the application.
  */
 @property (nonatomic, readonly) NSString* appVersion;
+
+/**
+ Returns the build version of the application.
+ 
+ @return The build version of the application.
+ */
+@property (nonatomic, readonly) NSString* buildVersion;
 
 @end
